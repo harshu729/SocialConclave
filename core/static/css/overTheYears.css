@@ -1,0 +1,262 @@
+.overTheYears .provide .header {
+  width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 200px;
+}
+
+.hideClass {
+  display: none !important;
+}
+
+.overTheYears .provide .header span {
+  font-family: montserrat-bold, sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.333;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: #2f89fc;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.overTheYears .provide .header h2 {
+  font-family: montserrat-medium, sans-serif;
+  font-size: 5.2rem;
+  line-height: 1.255;
+  color: #000;
+  margin-bottom: 1.8rem;
+  letter-spacing: -0.1rem;
+  margin-top: 0.6rem;
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+.overTheYears .provide .header p {
+  color: #757575;
+  font-family: lora-regular, serif;
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.765;
+}
+
+.overTheYears .provide .menu {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.overTheYears .provide .menu .points {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 250px 250px 250px 250px;
+  grid-template-columns: 250px 250px 250px 250px;
+}
+
+.overTheYears .provide .menu .points li {
+  list-style: none;
+}
+
+.overTheYears .provide .menu .points li a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: #000000;
+  font-size: 3rem;
+  line-height: 1.3;
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 15px 15px;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  font-family: montserrat-medium, sans-serif;
+}
+
+.overTheYears .provide .menu .points li a:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.overTheYears .provide .menu .points li .active-provide {
+  background-color: #2f89fc !important;
+  color: #ffffff;
+}
+
+.overTheYears .provide .explain-provide {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 45px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.overTheYears .provide .explain-provide .content-provide {
+  display: grid;
+  grid-template-columns: 330px 330px 330px;
+  column-gap: 15px;
+}
+
+.overTheYears .provide .explain-provide .content-provide .memberItem {
+  padding: 15px;
+  margin: 5px;
+  position: relative;
+  height: 560px;
+}
+
+.overTheYears .provide .explain-provide .content-provide .memberItem .imagePic {
+  width: 180px;
+  margin: 0 auto;
+}
+
+.overTheYears
+  .provide
+  .explain-provide
+  .content-provide
+  .memberItem
+  .imagePic
+  img {
+  border-radius: 50%;
+  box-shadow: 5px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.overTheYears
+  .provide
+  .explain-provide
+  .content-provide
+  .memberItem
+  .contentMem {
+  background-color: #2f88fc09;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.164);
+  transition: all 0.2s;
+  cursor: pointer;
+  position: absolute;
+  top: 100px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.overTheYears
+  .provide
+  .explain-provide
+  .content-provide
+  .memberItem
+  .contentMem:hover {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.164);
+}
+
+.overTheYears
+  .provide
+  .explain-provide
+  .content-provide
+  .memberItem
+  .contentMem
+  .name {
+  font-family: montserrat-semibold, sans-serif;
+  color: #000;
+  display: block;
+  font-size: 2.7rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.765;
+  margin-bottom: 0;
+}
+
+.overTheYears
+  .provide
+  .explain-provide
+  .content-provide
+  .memberItem
+  .contentMem
+  h4 {
+  font-family: montserrat, sans-serif;
+  color: #000;
+  display: block;
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.overTheYears
+  .provide
+  .explain-provide
+  .content-provide
+  .memberItem
+  .contentMem
+  .social {
+  margin: 15px 0;
+}
+
+.overTheYears
+  .provide
+  .explain-provide
+  .content-provide
+  .memberItem
+  .contentMem
+  .social
+  a {
+  width: 20px;
+  max-height: 20px;
+  line-height: 20px;
+}
+
+.overTheYears
+  .provide
+  .explain-provide
+  .content-provide
+  .memberItem
+  .contentMem
+  .social
+  a
+  img {
+  width: 22px;
+}
+
+.overTheYears
+  .provide
+  .explain-provide
+  .content-provide
+  .memberItem
+  .contentMem
+  .social
+  a
+  .instagram {
+  margin-bottom: -1px;
+  margin-left: 14px;
+}
+
+.overTheYears
+  .provide
+  .explain-provide
+  .content-provide
+  .memberItem
+  .contentMem
+  .text1 {
+  padding: 0 25px;
+  font-size: 1.5rem;
+}
+
+.overTheYears .provide .explain-provide .content-provide .headingDept {
+  font-size: 3rem;
+  line-height: 1.3;
+  margin-bottom: 1.8rem;
+  font-family: montserrat-medium, sans-serif;
+  color: #39b54a;
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  grid-column: 1 / 4;
+  text-align: center;
+  margin-top: 0;
+}
+
+.header-nav__list li {
+  display: inline !important;
+}
