@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from blogs import views as blog_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('about/', include('core.urls')),
+    path('blogs/',include('blogs.urls')),
+    path('json/',blog_views.jsonitems,name='json-items-view'),
 ]
