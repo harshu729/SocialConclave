@@ -1,6 +1,14 @@
 html {
   font-size: 10px;
 }
+@keyframes animmovedown {
+  from {
+    transform: translateY(-150px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
 @media only screen and (max-width: 400px) {
   html {
     font-size: 9.411764705882353px;
@@ -1985,23 +1993,40 @@ html.no-csstransitions .home-content__main {
   padding-left: 50px;
 }
 .services-list .service-text {
-  margin-left: 7.8rem;
+  text-align: justify;
+  padding: 0 25px;
+  border-radius: 25px !important;
+  z-index: 100 !important;
+  padding-top: 25px !important;
+  margin-top: -95px;
+  background-color: #e9f2ff !important;
+  position: relative;
+  animation-name: animmovedown;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
 }
 .services-list .service-icon {
-  float: left;
   color: #39b54a;
   font-size: 4.8rem;
-  margin-top: -0.6rem;
+  z-index: 2 !important;
+}
+
+.services-list .service-icon img {
+  width: 100%;
+  border-radius: 25px;
+  z-index: -2 !important;
+  position: relative;
 }
 @media only screen and (max-width: 1200px) {
   .services-list {
     max-width: 1000px;
   }
   .services-list .service-item:nth-child(2n + 1) {
-    padding-right: 30px;
+    padding-right: 73px;
   }
   .services-list .service-item:nth-child(2n + 2) {
-    padding-left: 30px;
+    padding-left: 73px;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -2030,11 +2055,22 @@ html.no-csstransitions .home-content__main {
   }
   .services-list .service-text {
     margin-left: 0;
+    border-radius: 25px !important;
+    margin-top: -55px !important;
+    z-index: 100;
+    padding-top: 25px !important;
+    background-color: #e9f2ff !important;
+    animation-name: animmovedown;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
   }
+
   .services-list .service-icon {
     font-size: 4.5rem;
     float: none;
     margin-top: 0;
+    z-index: 2;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -2996,4 +3032,21 @@ footer .row {
   .footer-main .right {
     padding-left: 0;
   }
+}
+
+#services > div.row.services-list.block-1-2.block-tab-full > div {
+  background-color: #e9f2ff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.164);
+  padding: 0 !important;
+  border-radius: 20px;
+  margin-bottom: 55px;
+}
+#services
+  > div.row.services-list.block-1-2.block-tab-full
+  > div:nth-child(even) {
+  margin-left: 5%;
+}
+
+.block-1-2 .col-block {
+  width: 47%;
 }

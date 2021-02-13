@@ -518,7 +518,7 @@ textarea {
   width: 33.33333%;
 }
 .block-1-2 .col-block {
-  width: 50%;
+  width: 45%;
 }
 .block-1-6 .col-block:nth-child(6n + 1),
 .block-1-5 .col-block:nth-child(5n + 1),

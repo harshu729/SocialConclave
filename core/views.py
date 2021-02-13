@@ -6,9 +6,9 @@ import json
 app_name = "core"
 
 
-def jsonitems(request, year):
+def jsonitems(request, deptName):
     coreinfo = serializers.serialize("json", Member.objects.all().filter(
-        year__icontains=year).order_by('posnum', 'firstName'))
+        deptName__icontains=deptName).order_by('posnum', 'firstName'))
     coreinfo = json.loads(coreinfo)
     return JsonResponse(coreinfo, safe=False)
 

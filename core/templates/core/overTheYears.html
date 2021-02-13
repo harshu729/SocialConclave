@@ -26,9 +26,9 @@
     crossorigin="anonymous"></script>
 
   <script>
-    function getcoredetails(year) {
+    function getcoredetails(deptName) {
 
-      $.getJSON("team/" + year, function (items) {
+      $.getJSON("team/" + deptName, function (items) {
 
         allDept = {
           "SC": "Super Core",
@@ -48,26 +48,21 @@
         }
 
         infoId = {
-          2018: "content-provide4",
-          2019: "content-provide3",
-          2020: "content-provide2",
+          "SC": "content-provide4",
+          "Informals": "content-provide3",
+          "Technical": "content-provide2",
           2021: "content-provide1"
         }
 
-        /*var wantedData = items.filter(function (i) {
-          return i.fields.deptName == "Informals";
-        });
-        console.log(wantedData);*/
-
-        // console.log(items[0].fields);
-
-        infoIdValue = infoId[year];
+        infoIdValue = infoId[deptName];
         const info = document.getElementById(infoIdValue);
         info.innerHTML = "";
+        info.innerHTML = infoId[deptName];
 
         for (var key in allDept) {
           var deptNameH = document.createElement('h2');
           deptNameH.classList.add('headingDept');
+          deptNameH.setAttribute("id", key);
           deptNameH.innerHTML = allDept[key];
           info.appendChild(deptNameH);
 
@@ -142,6 +137,42 @@
 
     }
 
+    function coreName() {
+
+      allDept = {
+        "SC": "Super Core",
+        "Admin": "Admin",
+        "AGM": "Artist And Guest Management",
+        "DC": "Digital Creatives",
+        "Hospitality": "Hospitality",
+        "IHC": "In-House Creatives",
+        "Informals": "Informals",
+        "Logistics": "Logistics",
+        "Marketing": "Marketing",
+        "Photography": "Photography",
+        "Publicity": "Publicity",
+        "R&D": "Research And Development",
+        "SMCW": "Social Media & Content Writing",
+        "Technical": "Technical"
+      }
+
+      var coreNames = document.getElementById("coreNames");
+
+
+      for (var key in allDept) {
+        var deptNameH = document.createElement('a');
+        deptNameH.classList.add('headingDept');
+        deptNameH.classList.add('headingDept1');
+        idContent = "#" + key;
+        deptNameH.setAttribute("href", idContent);
+        deptNameH.setAttribute("target", "_self");
+        deptNameH.innerHTML = allDept[key];
+
+        coreNames.appendChild(deptNameH);
+      }
+
+    }
+
     function getagendasdetails(year) {
 
       $.getJSON("agendas/" + year, function (items) {
@@ -204,7 +235,7 @@
 
 </head>
 
-<body id="top" class="overTheYears" onload="getcoredetails(2021); getagendasdetails(2021);">
+<body id="top" class="overTheYears" onload="getcoredetails(2021); getagendasdetails(2021); coreName();">
 
   <header class="s-header">
     <div class="header-logo">
@@ -234,9 +265,9 @@
       <div class="row home-content__main">
         <h3>Welcome to Social Conclave</h3>
         <h1 style="margin-bottom:0px;">
-            We strive to spread smiles <br> and impact lives,</h1> 
-        <h1 style='margin-top:0px;'>    
-            ONE PROBLEM AT A TIME. <br>
+          We strive to spread smiles <br> and impact lives,</h1>
+        <h1 style='margin-top:0px;'>
+          ONE PROBLEM AT A TIME. <br>
         </h1>
         <div class="home-content__buttons">
           <a href="#contact" class="smoothscroll btn btn--stroke">
@@ -360,56 +391,55 @@
         <div class="points">
           <li>
             <a href="" class="provide-list active-provide" id="provide-list1"
-              onclick="changeActive('provide-list1', 'content-provide1'); getcoredetails(2021); return false;">2021</a>
+              onclick="changeActive('provide-list1', 'content-provide1'); getcoredetails('SC'); return false;">SC</a>
           </li>
 
           <li>
             <a href="" class="provide-list" id="provide-list2"
-              onclick="changeActive('provide-list2', 'content-provide2'); getcoredetails(2020); return false;">2020</a>
+              onclick="changeActive('provide-list2', 'content-provide2'); getcoredetails('Informals'); return false;">Informals</a>
           </li>
 
           <li>
             <a href="" class="provide-list" id="provide-list3"
-              onclick="changeActive('provide-list3', 'content-provide3'); getcoredetails(2019); return false;">2019</a>
-          </li>
-
-          <li>
-            <a href="" class="provide-list" id="provide-list4"
-              onclick="changeActive('provide-list4', 'content-provide4'); getcoredetails(2018); return false;">2018</a>
+              onclick="changeActive('provide-list3', 'content-provide3'); getcoredetails('Technical'); return false;">Technical</a>
           </li>
         </div>
       </div>
 
       <div class="explain-provide">
-        <div class="content-provide teamsContent" id="content-provide1">
-
-
-          <!-- <div class="memberItem">
-            <div class="imagePic">
-              <img src="{% static 'images/test.jfif' %}" alt="">
-            </div>
-            <div class="contentMem">
-              <h2 class="name">Jane</h2>
-              <h4>Des</h4>
-              <div class="social">
-                <a href="#"><img src="{% static 'images/linkedin.png' %}" alt=""></a>
-                <a href="#"><img class="instagram" src="{% static 'images/instagram.png' %}" alt=""></a>
-              </div>
-              <p class="text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, consequatur? Porro
-                dignissimos perferendis rem corrupti. Numquam magnam repellat soluta recusandae.</p>
-            </div>
-          </div> -->
+        <div class="explain-provide1" id="coreNames">
 
         </div>
+        <div class="explain-provide2">
+          <div class="content-provide teamsContent" id="content-provide1">
+            <!-- <div class="memberItem">
+                      <div class="imagePic">
+                        <img src="{% static 'images/test.jfif' %}" alt="">
+                      </div>
+                      <div class="contentMem">
+                        <h2 class="name">Jane</h2>
+                        <h4>Des</h4>
+                        <div class="social">
+                          <a href="#"><img src="{% static 'images/linkedin.png' %}" alt=""></a>
+                          <a href="#"><img class="instagram" src="{% static 'images/instagram.png' %}" alt=""></a>
+                        </div>
+                        <p class="text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, consequatur? Porro
+                          dignissimos perferendis rem corrupti. Numquam magnam repellat soluta recusandae.</p>
+                      </div>
+                    </div> -->
 
-        <div class="content-provide hideClass teamsContent" id="content-provide2">
+          </div>
+
+          <div class="content-provide hideClass teamsContent" id="content-provide2">
+          </div>
+
+          <div class="content-provide hideClass teamsContent" id="content-provide3">
+          </div>
+
+          <div class="content-provide hideClass teamsContent" id="content-provide4">
+          </div>
         </div>
 
-        <div class="content-provide hideClass teamsContent" id="content-provide3">
-        </div>
-
-        <div class="content-provide hideClass teamsContent" id="content-provide4">
-        </div>
       </div>
     </div>
   </section>
@@ -502,6 +532,7 @@
   <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
   <script src="{% static 'js/9959-js-plugins.js' %}"></script>
   <script src="{% static 'js/320-js-main.js' %}"></script>
+
 </body>
 
 </html>
