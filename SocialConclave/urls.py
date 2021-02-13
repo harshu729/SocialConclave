@@ -22,5 +22,6 @@ urlpatterns = [
     path('', include('main.urls')),
     path('about/', include('core.urls')),
     path('blogs/',include('blogs.urls')),
+     path('register/',include('register.urls')),
     path('json/',blog_views.jsonitems,name='json-items-view'),
 ]
