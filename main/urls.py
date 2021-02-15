@@ -1,9 +1,10 @@
-from django.urls import path,include
+from django.urls import path, include
 from . import views
 from django.views.generic import TemplateView
 
-app_name='main'
+app_name = 'main'
 
 urlpatterns = [
-    path('',views.home,name='landing-page'),
+    path('', views.home, name='landing-page'),
+    path('ayushya/', views.ayushya, name='ayushya'),
 ]

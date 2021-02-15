@@ -12,73 +12,11 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="{% static 'css/nav.css' %}">
     <script src="{% static 'js/modernizr.js' %}"></script>
     <script src="{% static 'js/pace.min.js' %}"></script>
     <link rel="shortcut icon" href="{% static 'favicons/.-3397-favicon.ico' %}" type="image/x-icon">
     <link rel="icon" href="{% static 'favicons/.-9210-favicon.ico' %}" type="image/x-icon">
-	<style>
-@media only screen and (max-width: 680px) {
-  #bigone {
-    display: none;
-  }
-  #smallone{
-	display: inline-block;
-  }
-}
-@media only screen and (min-width: 680px) {
-  #bigone {
-   display: block;
-  }
-  #smallone{
-	display: none;
-  }
-}
-.con{
-  display: inline-block;
-  cursor: pointer;
-  padding:1em;
-}
-
-.bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color:white;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-.change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
-}
-@keyframes example {
-  from {height: 0%;}
-  to {height: 100%;}
-}
-@keyframes opp{
-  from {height: 100%;}
-  to {height: 0%;}
-}
-#popout{
-display:none;
-position:fixed;
-animation-name: example;
-animation-duration: 1s;
-height:100%;
-width:100%;
-left:0;
-top:75px;
-background-color:black;
-z-index:9;
-}
-</style>
 </head>
 
 <body id="top">
@@ -100,17 +38,23 @@ z-index:9;
                 </ul>
             </div>
         </nav>
-		<nav id="smallone" class="con" style="float:right;" onclick="myFunction(this)">
+		<nav id="smallone" class="con" style="float:right;" onclick="myFunction();">
 		<div class="bar1"></div>
 		<div class="bar2"></div>
 		<div class="bar3"></div>
 		</nav>
     </header>
-	<div id="popout">
+<div id="myNav" class="ov">
+  <div class="ov-content">
+    <a class="smoothscroll" href="#home" title="home" onclick="myFunction();">Home</a>
+    <a class="smoothscroll" href="#about" title="about" onclick="myFunction();">About Us</a>
+    <a class="smoothscroll" href="#works" title="works" onclick="myFunction();">Glimpse</a>
+    <a class="smoothscroll" href="#clients" title="clients" onclick="myFunction();">Affiliations</a>
+    <a class="smoothscroll" href="#contact" title="contact" onclick="myFunction();">Contact</a>
+  </div>
+</div>
 	
-	</div>
 	
-	<div class="all">
 
     <section id="home" class="s-home target-section" data-parallax="scroll"
         data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000"
@@ -143,19 +87,19 @@ z-index:9;
         </div>
         <ul class="home-social">
             <li>
-                <a href="https://facebook.com/socialconclave"  target="_blank"><i class="fa fa-facebook"
+                <a href="https://facebook.com/socialconclave"><i class="fa fa-facebook"
                         aria-hidden="true"></i><span>Facebook</span></a>
             </li>
             <li>
-                <a href="https://twitter.com/social_conclave"  target="_blank"><i class="fa fa-twitter"
+                <a href="https://twitter.com/social_conclave"><i class="fa fa-twitter"
                         aria-hidden="true"></i><span>Twiiter</span></a>
             </li>
             <li>
-                <a href="https://instagram.com/socialconclave"  target="_blank"><i class="fa fa-instagram"
+                <a href="https://instagram.com/socialconclave"><i class="fa fa-instagram"
                         aria-hidden="true"></i><span>Instagram</span></a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/company/socialconclave/" target="_blank"><i class="fa fa-linkedin"
+                <a href="https://www.linkedin.com/company/socialconclave/"><i class="fa fa-linkedin"
                         aria-hidden="true"></i><span>LinkedIn</span></a>
             </li>
         </ul>
@@ -296,7 +240,9 @@ z-index:9;
                             <div class="item-folio__thumb">
                                 <a href="{% static 'images/portfolio/gallery/g-shutterbug.jpg' %}" class="thumb-link"
                                     title="Shutterbug" data-size="1050x700">
-                                    <img src="{% static 'images/portfolio/img1.jpg' %}" alt=""></a>
+                                    <img src="{% static 'images/portfolio-lady-shutterbug.jpg' %}"
+                                        srcset="{% static 'images/portfolio/lady-shutterbug.jpg' %} 1x, {% static 'images/portfolio/lady-shutterbug@2x.jpg' %} 2x"
+                                        alt=""></a>
                             </div>
                             <div class="item-folio__text">
                                 <h3 class="item-folio__title">
@@ -318,9 +264,11 @@ z-index:9;
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="{% static 'images/portfolio/gallery/g-shutterbug.jpg' %}" class="thumb-link"
-                                    title="Shutterbug" data-size="1050x700">
-                                    <img src="{% static 'images/portfolio/img2.jpg' %}" alt=""></a>
+                                <a href="{% static 'images/portfolio/gallery/g-woodcraft.jpg' %}" class="thumb-link"
+                                    title="Woodcraft" data-size="1050x700">
+                                    <img src="{% static 'images/portfolio-woodcraft.jpg' %}"
+                                        srcset="{% static 'images/portfolio/woodcraft.jpg' %} 1x, {% static 'images/portfolio/woodcraft@2x.jpg' %} 2x"
+                                        alt=""></a>
                             </div>
                             <div class="item-folio__text">
                                 <h3 class="item-folio__title">
@@ -342,9 +290,11 @@ z-index:9;
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="{% static 'images/portfolio/gallery/g-shutterbug.jpg' %}" class="thumb-link"
-                                title="Shutterbug" data-size="1050x700">
-                                <img src="{% static 'images/portfolio/img3.jpg' %}" alt=""></a>
+                                <a href="{% static 'images/portfolio/gallery/g-beetle.jpg' %}" class="thumb-link"
+                                    title="The Beetle Car" data-size="1050x700">
+                                    <img src="{% static 'images/portfolio-the-beetle.jpg' %}"
+                                        srcset="{% static 'images/portfolio/the-beetle.jpg' %} 1x, {% static 'images/portfolio/the-beetle@2x.jpg' %} 2x"
+                                        alt=""></a>
                             </div>
                             <div class="item-folio__text">
                                 <h3 class="item-folio__title">
@@ -366,9 +316,11 @@ z-index:9;
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="{% static 'images/portfolio/gallery/g-shutterbug.jpg' %}" class="thumb-link"
-                                    title="Shutterbug" data-size="1050x700">
-                                    <img src="{% static 'images/portfolio/img4.jpg' %}" alt=""></a>
+                                <a href="{% static 'images/portfolio/gallery/g-grow-green.jpg' %}" class="thumb-link"
+                                    title="Grow Green" data-size="1050x700">
+                                    <img src="{% static 'images/portfolio-grow-green.jpg' %}"
+                                        srcset="{% static 'images/portfolio/grow-green.jpg' %} 1x, {% static 'images/portfolio/grow-green@2x.jpg' %} 2x"
+                                        alt=""></a>
                             </div>
                             <div class="item-folio__text">
                                 <h3 class="item-folio__title">
@@ -390,9 +342,11 @@ z-index:9;
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="{% static 'images/portfolio/gallery/g-shutterbug.jpg' %}" class="thumb-link"
-                                    title="Shutterbug" data-size="1050x700">
-                                    <img src="{% static 'images/portfolio/img5.jpg' %}" alt=""></a>
+                                <a href="{% static 'images/portfolio/gallery/g-guitarist.jpg' %}" class="thumb-link"
+                                    title="Guitarist" data-size="1050x700">
+                                    <img src="{% static 'images/portfolio-guitarist.jpg' %}"
+                                        srcset="{% static 'images/portfolio/guitarist.jpg' %} 1x, {% static 'images/portfolio/guitarist@2x.jpg' %} 2x"
+                                        alt=""></a>
                             </div>
                             <div class="item-folio__text">
                                 <h3 class="item-folio__title">
@@ -414,9 +368,11 @@ z-index:9;
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="{% static 'images/portfolio/gallery/g-shutterbug.jpg' %}" class="thumb-link"
-                                    title="Shutterbug" data-size="1050x700">
-                                    <img src="{% static 'images/portfolio/img6.jpg' %}" alt=""></a>
+                                <a href="{% static 'images/portfolio/gallery/g-palmeira.jpg' %}" class="thumb-link"
+                                    title="Palmeira" data-size="1050x700">
+                                    <img src="{% static 'images/portfolio-palmeira.jpg' %}"
+                                        srcset="{% static 'images/portfolio/palmeira.jpg' %} 1x, {% static 'images/portfolio/palmeira@2x.jpg' %} 2x"
+                                        alt=""></a>
                             </div>
                             <div class="item-folio__text">
                                 <h3 class="item-folio__title">
@@ -586,13 +542,13 @@ z-index:9;
                     </div>
                     <ul class="contact-social">
                         <li>
-                            <a href="https://www.facebook.com/socialconclave/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/social_conclave/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/socialconclave/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
@@ -685,13 +641,12 @@ z-index:9;
             </div>
         </div>
     </div>
-</div>
     <script data-cfasync="false" src="{% static 'js/cloudflare-static-email-decode.min.js' %}"></script>
     <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
     <script src="{% static 'js/9959-js-plugins.js' %}"></script>
     <script src="{% static 'js/320-js-main.js' %}"></script>
+	<script src="{% static 'js/nav.js' %}"></script>
     <script>
-	b=1;
         $(window).scroll(function () {
             var sTop = $(this).scrollTop();
             if (sTop >= 1500) {
@@ -699,18 +654,6 @@ z-index:9;
             }
 
         });
-		function myFunction(x) {
-		b+=1;
-		if(b == 2){
-		document.getElementById("popout").style.display="block"; 
-		b=0;
-		}
-		if(b == 1){
-		document.getElementById("popout").style.animation="spin2 2s linear 1";
-		document.getElementById("popout").style.display="none"; 
-		}
-  x.classList.toggle("change");
-}
     </script>
 </body>
 
