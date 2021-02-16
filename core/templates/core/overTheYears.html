@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
   <link rel="stylesheet" href="{% static 'css/main.css' %}">
   <link rel="stylesheet" href="{% static 'css/overTheYears.css' %}">
+  <link rel="stylesheet" href="{% static 'css/overtheyears2.css' %}">
   <script src="{% static 'js/modernizr.js' %}"></script>
   <script src="{% static 'js/pace.min.js' %}"></script>
   <link rel="shortcut icon" href="{% static 'favicons/.-3397-favicon.ico' %}" type="image/x-icon">
@@ -322,7 +323,7 @@
       </div>
       <script src="{% static 'js/provide.js' %}"></script>
       <div class="menu">
-        <div class="points">
+        <!-- <div class="points">
           <li>
             <a href="" class="provide-listA active-provide" id="provide-listA1"
               onclick="changeActiveAgendas('provide-listA1', 'content-provideA1'); getagendasdetails(2021); return false;">2021</a>
@@ -342,35 +343,45 @@
             <a href="" class="provide-listA" id="provide-listA4"
               onclick="changeActiveAgendas('provide-listA4', 'content-provideA4'); getagendasdetails(2018); return false;">2018</a>
           </li>
-        </div>
-      </div>
-
-      <div class="explain-provide">
-        <div class="content-provide agendasContent" id="content-provideA1">
-          <div class="agendasContainer">
-            <!-- <div class="agendasItems">
-              <div class="logo">SC</div>
-              <div class="title">Title</div>
-              <div class="description">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, perspiciatis!
+        </div> -->
+        <div class="vertical-bar">
+          <div class="parent-div-years">
+            <ul>
+              <li class="active"><a href="#"><span></span><span></span> 2018</a></li>
+              <li><a href="#"><span></span><span></span> 2019</a></li>
+              <li><a href="#"><span></span><span></span> 2020</a></li>
+              <li><a href="#"><span></span><span></span> 2021</a></li>
+            </ul>
+          </div>
+          <div class="explain-provide">
+            <div class="content-provide agendasContent" id="content-provideA1">
+              <div class="agendasContainer">
+                <!-- <div class="agendasItems">
+                  <div class="logo">SC</div>
+                  <div class="title">Title</div>
+                  <div class="description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, perspiciatis!
+                  </div>
+                  <div class="shape">
+                    <div class="hexa gon"></div>
+                  </div>
+                </div> -->
               </div>
-              <div class="shape">
-                <div class="hexa gon"></div>
-              </div>
-            </div> -->
+            </div>
+    
+            <div class="content-provide agendasContent hideClass" id="content-provideA2">
+            </div>
+    
+            <div class="content-provide agendasContent hideClass" id="content-provideA3">
+            </div>
+    
+            <div class="content-provide agendasContent hideClass" id="content-provideA4">
+            </div>
+    
           </div>
         </div>
-
-        <div class="content-provide agendasContent hideClass" id="content-provideA2">
-        </div>
-
-        <div class="content-provide agendasContent hideClass" id="content-provideA3">
-        </div>
-
-        <div class="content-provide agendasContent hideClass" id="content-provideA4">
-        </div>
-
       </div>
+
     </div>
 
 
