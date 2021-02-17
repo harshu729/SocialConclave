@@ -2133,7 +2133,7 @@ html.no-csstransitions .home-content__main {
 .item-folio__thumb a {
   display: block;
 }
-.item-folio__thumb a::before {
+/*.item-folio__thumb a::before {
   display: block;
   background-color: rgba(0, 0, 0, 0.8);
   content: "";
@@ -2171,7 +2171,7 @@ html.no-csstransitions .home-content__main {
   -ms-transform: scale(0.5);
   transform: scale(0.5);
   z-index: 1;
-}
+}*/
 .item-folio__text {
   position: absolute;
   left: 0;
@@ -2939,13 +2939,14 @@ footer .row {
   width: 60px;
   line-height: 60px;
   text-align: center;
-  background: #000;
-  color: #39b54a;
+  background: rgba(0,0,0,0.7);
+  color: #2f89fc;
   text-align: center;
   text-transform: uppercase;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   float: right;
+  border-radius:50%;
 }
 
 .go-top .registerTop {

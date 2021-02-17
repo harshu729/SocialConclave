@@ -23,7 +23,7 @@
 
     <header class="s-header">
         <div class="header-logo">
-            <a class="site-logo" href="index.html">
+            <a class="site-logo" href="{% url 'main:landing-page' %}">
                 <img style="max-width:75%;margin-left:-15px;" src="{% static 'images/images-logo.png' %}"
                     alt="Homepage"></a>
         </div>
@@ -70,10 +70,10 @@
                     ONE PROBLEM AT A TIME. <br>
                 </h1>
                 <div class="home-content__buttons">
-                    <a href="/register/" class="smoothscroll btn btn--stroke">
+                    <a href="{% url 'register:register-page' %}" class="btn btn--stroke">
                         Register
                     </a>
-                    <a href="{% url 'core:overTheYears' %}" target="_blank" class="smoothscroll btn btn--stroke">
+                    <a href="{% url 'core:overTheYears' %}" class="btn btn--stroke">
                         More About Us
                     </a>
                 </div>
@@ -238,48 +238,9 @@
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="{% static 'images/portfolio/gallery/g-shutterbug.jpg' %}" class="thumb-link"
+                                <a class="thumb-link"
                                     title="Shutterbug" data-size="1050x700">
                                     <img src="{% static 'images/portfolio/img1.jpg' %}" alt=""></a>
-                            </div>
-                            <div class="item-folio__text">
-                                <h3 class="item-folio__title">
-                                    Shutterbug
-                                </h3>
-                                <p class="item-folio__cat">
-                                    Branding
-                                </p>
-                            </div>
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                                <i class="icon-link"></i>
-                            </a>
-                            <div class="item-folio__caption">
-                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
-                                    dolorem corrupti neque nisi.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="masonry__brick" data-aos="fade-up">
-                        <div class="item-folio">
-                            <div class="item-folio__thumb">
-                                <a href="{% static 'images/portfolio/gallery/g-shutterbug.jpg' %}" class="thumb-link"
-                                    title="Shutterbug" data-size="1050x700">
-                                    <img src="{% static 'images/portfolio/img2.jpg' %}" alt=""></a>
-                            </div>
-                            <div class="item-folio__text">
-                                <h3 class="item-folio__title">
-                                    Woodcraft
-                                </h3>
-                                <p class="item-folio__cat">
-                                    Web Design
-                                </p>
-                            </div>
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                                <i class="icon-link"></i>
-                            </a>
-                            <div class="item-folio__caption">
-                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
-                                    dolorem corrupti neque nisi.</p>
                             </div>
                         </div>
                     </div>
@@ -288,23 +249,19 @@
                             <div class="item-folio__thumb">
                                 <a class="thumb-link"
                                     title="Shutterbug" data-size="1050x700">
-                                    <img src="{% static 'images/portfolio/img3.jpg' %}" alt=""><</a>
+                                    <img src="{% static 'images/portfolio/img2.jpg' %}" alt=""></a>
                             </div>
-                            <div class="item-folio__text">
-                                <h3 class="item-folio__title">
-                                    The Beetle
-                                </h3>
-                                <p class="item-folio__cat">
-                                    Web Development
-                                </p>
+                        
+                        </div>
+                    </div>
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                            <div class="item-folio__thumb">
+                                <a class="thumb-link"
+                                    title="Shutterbug" data-size="1050x700">
+                                    <img src="{% static 'images/portfolio/img3.jpg' %}" alt=""></a>
                             </div>
-                            <!-- <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                                <i class="icon-link"></i>
-                            </a> -->
-                            <div class="item-folio__caption">
-                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
-                                    dolorem corrupti neque nisi.</p>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="masonry__brick" data-aos="fade-up">
@@ -314,21 +271,7 @@
                                     title="Shutterbug" data-size="1050x700">
                                     <img src="{% static 'images/portfolio/img4.jpg' %}" alt=""></a>
                             </div>
-                            <div class="item-folio__text">
-                                <h3 class="item-folio__title">
-                                    Grow Green
-                                </h3>
-                                <p class="item-folio__cat">
-                                    Branding
-                                </p>
-                            </div>
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                                <i class="icon-link"></i>
-                            </a>
-                            <div class="item-folio__caption">
-                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
-                                    dolorem corrupti neque nisi.</p>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="masonry__brick" data-aos="fade-up">
@@ -338,21 +281,7 @@
                                     title="Shutterbug" data-size="1050x700">
                                     <img src="{% static 'images/portfolio/img5.jpg' %}" alt=""></a>
                             </div>
-                            <div class="item-folio__text">
-                                <h3 class="item-folio__title">
-                                    Guitarist
-                                </h3>
-                                <p class="item-folio__cat">
-                                    Web Design
-                                </p>
-                            </div>
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                                <i class="icon-link"></i>
-                            </a>
-                            <div class="item-folio__caption">
-                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
-                                    dolorem corrupti neque nisi.</p>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="masonry__brick" data-aos="fade-up">
@@ -362,21 +291,7 @@
                                     title="Shutterbug" data-size="1050x700">
                                     <img src="{% static 'images/portfolio/img6.jpg' %}" alt=""></a>
                             </div>
-                            <div class="item-folio__text">
-                                <h3 class="item-folio__title">
-                                    Palmeira
-                                </h3>
-                                <p class="item-folio__cat">
-                                    Web Design
-                                </p>
-                            </div>
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                                <i class="icon-link"></i>
-                            </a>
-                            <div class="item-folio__caption">
-                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
-                                    dolorem corrupti neque nisi.</p>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -455,7 +370,6 @@
     </section>
     <section id="contact" class="s-contact">
         <div class="overlay"></div>
-        <div class="contact__line"></div>
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
                 <h3 class="subhead">Contact Us</h3>
@@ -530,19 +444,17 @@
                     </div>
                     <ul class="contact-social">
                         <li>
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/socialconclave"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="https://twitter.com/social_conclave"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/socialconclave"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/company/socialconclave/"><i class="fa fa-linkedin"
+                                    aria-hidden="true"></i><span></span></a>
                         </li>
                     </ul>
                 </div>
