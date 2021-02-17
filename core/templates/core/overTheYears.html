@@ -240,7 +240,7 @@
 
   <header class="s-header">
     <div class="header-logo">
-      <a class="site-logo" href="index.html">
+      <a class="site-logo" href="{% url 'main:landing-page' %}">
         <img src="{% static 'images/images-logo.png' %}" alt="Homepage"></a>
     </div>
     <nav class="header-nav1">
@@ -271,10 +271,10 @@
           ONE PROBLEM AT A TIME. <br>
         </h1>
         <div class="home-content__buttons">
-          <a href="#contact" class="smoothscroll btn btn--stroke">
+          <a href="/register" class="btn btn--stroke">
             Register
           </a>
-          <a href="#" class="smoothscroll btn btn--stroke">
+          <a href="{% url 'main:landing-page' %}" class="btn btn--stroke">
             Home
           </a>
         </div>
