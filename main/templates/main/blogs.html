@@ -10,6 +10,7 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 	<link rel="stylesheet" href="{% static 'css/nav.css' %}">
@@ -128,9 +129,84 @@ He is, in other words, someone who defies easy pigeonholing. And when Ma took on
 </div>
 </div>
 </div>
+<div class="container-fluid" style="padding-bottom:10rem;background:rgba(0,0,0,0.7);font-family: 'Montserrat', sans-serif;">
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-5" style="padding-top:9rem;font-size:15px;line-height:2;color:rgba(255, 255, 255, 0.5);padding-left:8rem;">
+<img src="{% static 'images/logo-footer.png' %}" style="height:28px;width:85px;"><br><br>
+Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Quaerat voluptas autem necessitatibus vitae aut. 
+</div>
+<div class="col-md-5" style="padding-top:10rem;font-size:15px;line-height:2;color:rgba(255, 255, 255, 0.5);padding-left:8rem;"><h4 style="color:white;font-size:1.6rem;line-height:1.313;">Get Notified</h4><br>
+Quia quo qui sed odit. Quaerat voluptas autem necessitatibus vitae aut non alias sed quia. Ut itaque enim optio ut excepturi deserunt iusto porro.
+</div>
+</div>
+</div>
+<div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up"
+                            aria-hidden="true"></i></a>
+                </div>
+<div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close"
+                        title="Close (Esc)"></button> <button class="pswp__button pswp__button--share"
+                        title="Share"></button> <button class="pswp__button pswp__button--fs"
+                        title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom"
+                        title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="{% static 'js/nav.js' %}"></script>
+<script data-cfasync="false" src="{% static 'js/cloudflare-static-email-decode.min.js' %}"></script>
+    <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/9959-js-plugins.js' %}"></script>
+    <script src="{% static 'js/320-js-main.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+    <script>
+        $(window).scroll(function () {
+            var sTop = $(this).scrollTop();
+            if (sTop >= 1500) {
+                $(".service-text").addClass("animmovedown");
+            }
+
+        });
+    </script>
 </body>
 
 </html>
