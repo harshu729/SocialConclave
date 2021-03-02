@@ -5,18 +5,27 @@
 
 <head>
     <meta charset="utf-8">
-    <title>TEST-TITLE</title>
+    <title>Home | Social Conclave</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="http://cdn.arshen.ir/micon/3.0.168/dist/micon/css/micon.min.css"> -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+
     <script src="{% static 'js/modernizr.js' %}"></script>
     <script src="{% static 'js/pace.min.js' %}"></script>
-    <link rel="shortcut icon" href="{% static 'favicons/.-3397-favicon.ico' %}" type="image/x-icon">
-    <link rel="icon" href="{% static 'favicons/.-9210-favicon.ico' %}" type="image/x-icon">
+    <!-- <link rel="shortcut icon" href="{% static 'favicons/.-3397-favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'favicons/.-9210-favicon.ico' %}" type="image/x-icon"> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+    <!-- <link rel="manifest" href="{% static 'site.webmanifest' %}"> -->
+
 </head>
 
 <body id="top">
@@ -54,7 +63,6 @@
     </div>
 
 
-
     <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000" data-position-y="center">
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
@@ -84,20 +92,16 @@
         </div>-->
             <ul class="home-social">
                 <li>
-                    <a href="https://facebook.com/socialconclave"><i class="fa fa-facebook"
-                            aria-hidden="true"></i><span>Facebook</span></a>
+                    <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/social_conclave"><i class="fa fa-twitter"
-                            aria-hidden="true"></i><span>Twitter</span></a>
+                    <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
                 </li>
                 <li>
-                    <a href="https://instagram.com/socialconclave"><i class="fa fa-instagram"
-                            aria-hidden="true"></i><span>Instagram</span></a>
+                    <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/company/socialconclave/"><i class="fa fa-linkedin"
-                            aria-hidden="true"></i><span>LinkedIn</span></a>
+                    <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></a>
                 </li>
             </ul>
     </section>
@@ -106,9 +110,10 @@
             <div class="col-full">
                 <h3 class="subhead subhead--dark">Hello There</h3>
                 <h1 class="display-1 display-1--light">This is about us</h1>
-                <p>
-                    content dedo pls
-                </p>
+                <p>Social Conclave is a one of its kind national conference wherein the delegates from across the nation will gather to discuss about the various social and economic concerns plaguing our country. The main aim of the conference is to find
+                    feasible solutions for the problems which are implemented by Team Social Impact. Multiple panel discussions will be held throughout the span of the conference and thus, the delegates would get a helping hand from the renowned panellists.
+                    The main objective of Social Conclave is to indulge the delegates in several inspiring discussions and debate sessions, with the hope of changing the face of India for the better. We will also be organising a field visit for the delegates
+                    to help them get to the crux of the situation. We hope that the conference will see the birth of India’s next generation of change-makers.</p>
             </div>
         </div>
         <div class="row about-desc" data-aos="fade-up">
@@ -141,11 +146,11 @@
     <section id="services" class="s-services">
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-                <h3 class="subhead">What We Do</h3>
-                <h1 class="display-2">We&rsquo;ve got everything you need to launch and grow your business</h1>
+                <!-- <h3 class="subhead">What We Do</h3> -->
+                <h1 class="display-2">The Conclave Blog</h1>
             </div>
         </div>
-        <div class="row services-list block-1-2 block-tab-full">
+        <div class="row services-list block-1-2 block-tab-full" id="remblock">
             <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon">
                     <img src="{% static 'images/blog-pic.jpg' %}">
@@ -166,7 +171,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-block service-item" data-aos="fade-up">
+            <!-- <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon">
                     <img src="{% static 'images/blog-pic.jpg' %}">
                 </div>
@@ -205,7 +210,7 @@
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.
                     </p>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <section id="works" class="s-works">
@@ -223,16 +228,18 @@
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a class="thumb-link" title="Shutterbug" data-size="1050x700">
-                                    <img src="{% static 'images/portfolio/img1.jpg' %}" alt=""></a>
+                                <a href="{% static 'images/memory-lane/img1.jpg' %}" class="thumb-link" title="Shutterbug" data-size="600x800">
+                                    <img src="{% static 'images/memory-lane/img1.jpg' %}" alt="">
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a class="thumb-link" title="Shutterbug" data-size="1050x700">
-                                    <img src="{% static 'images/portfolio/img2.jpg' %}" alt=""></a>
+                                <a href="{% static 'images/memory-lane/img2.jpg' %}" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                    <img src="{% static 'images/memory-lane/img2.jpg' %}" alt="">
+                                </a>
                             </div>
 
                         </div>
@@ -240,27 +247,18 @@
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <<<<<<< HEAD <a class="thumb-link" title="Shutterbug" data-size="1050x700">
-                                    <img src="{% static 'images/portfolio/img3.jpg' %}" alt="">
-                                    << /a>
+                                <a href="{% static 'images/memory-lane/img3.jpg' %}" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                    <img src="{% static 'images/memory-lane/img3.jpg' %}" alt="">
+                                </a>
                             </div>
-                            <div class="item-folio__text">
-                                <h3 class="item-folio__title">
-                                    The Beetle
-                                </h3>
-                                <p class="item-folio__cat">
-                                    Web Development
-                                </p>
-                            </div>
-                            <!-- <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                                <i class="icon-link"></i>
-                            </a> -->
-                            <div class="item-folio__caption">
-                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                                =======
-                                <a class="thumb-link" title="Shutterbug" data-size="1050x700">
-                                    <img src="{% static 'images/portfolio/img3.jpg' %}" alt=""></a>
-                                >>>>>>> 517d5484edc7e4dc35128a113ff8724cced7bba7
+                        </div>
+                    </div>
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                            <div class="item-folio__thumb">
+                                <a href="{% static 'images/memory-lane/img4.jpg' %}" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                    <img src="{% static 'images/memory-lane/img4.jpg' %}" alt="">
+                                </a>
                             </div>
 
                         </div>
@@ -268,8 +266,9 @@
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="{% static 'images/portfolio/gallery/g-shutterbug.jpg' %}" class="thumb-link" title="Shutterbug" data-size="1050x700">
-                                    <img src="{% static 'images/portfolio/img4.jpg' %}" alt=""></a>
+                                <a href="{% static 'images/memory-lane/img5.jpg' %}" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                    <img src="{% static 'images/memory-lane/img5.jpg' %}" alt="">
+                                </a>
                             </div>
 
                         </div>
@@ -277,19 +276,19 @@
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="{% static 'images/portfolio/gallery/g-shutterbug.jpg' %}" class="thumb-link" title="Shutterbug" data-size="1050x700">
-                                    <img src="{% static 'images/portfolio/img5.jpg' %}" alt=""></a>
+                                <a href="{% static 'images/memory-lane/img6.jpg' %}" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                    <img src="{% static 'images/memory-lane/img6.jpg' %}" alt="">
+                                </a>
                             </div>
-
                         </div>
                     </div>
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="{% static 'images/portfolio/gallery/g-shutterbug.jpg' %}" class="thumb-link" title="Shutterbug" data-size="1050x700">
-                                    <img src="{% static 'images/portfolio/img6.jpg' %}" alt=""></a>
+                                <a href="{% static 'images/memory-lane/img7.jpg' %}" class="thumb-link" title="Social Conclave 19" data-size="1050x700">
+                                    <img src="{% static 'images/memory-lane/img7.jpg' %}" alt="">
+                                </a>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -420,17 +419,16 @@
                     </div>
                     <ul class="contact-social">
                         <li>
-                            <a href="https://www.facebook.com/socialconclave"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/social_conclave"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/socialconclave"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/company/socialconclave/"><i class="fa fa-linkedin"
-                                    aria-hidden="true"></i><span></span></a>
+                            <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></a>
                         </li>
                     </ul>
                 </div>
@@ -513,6 +511,9 @@
 
         });
     </script>
+
+
+
 </body>
 
 </html>
