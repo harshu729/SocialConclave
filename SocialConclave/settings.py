@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig',
     'blogs.apps.BlogsConfig',
     'register.apps.RegisterConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -128,4 +129,9 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 django_heroku.settings(locals())
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

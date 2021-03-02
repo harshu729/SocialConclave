@@ -1,0 +1,44 @@
+.flexcontainer {
+  z-index: -1;
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  margin: 0px auto 80px;
+}
+.container {
+  flex: 6;
+  justify-content: center;
+}
+.container .topic h1 {
+  margin: 30px 120px 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 6rem;
+}
+.container .button button {
+  margin: 0px 450px 20px;
+  font-size: 20px;
+  color: white;
+}
+.btn-overlay {
+  background: #2f89fc;
+  position: relative;
+  overflow: hidden;
+}
+.btn-overlay:after {
+  content: "";
+  position: absolute;
+  width: 115%;
+  height: 200px;
+  background: #1858ac;
+  transform: translateY(-45%) skew(25deg) scale(0);
+  left: -5%;
+  transition: 200ms ease-in-out;
+}
+.btn-overlay:hover:after {
+  transform: translateY(-45%) skew(25deg) scale(1);
+}
+.btn-overlay span {
+  position: relative;
+  z-index: 1;
+}
