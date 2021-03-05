@@ -4,658 +4,330 @@
 <html class="no-js" lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <title>Social Conclave | More About Us</title>
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="{% static 'css/base.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/vendor.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/overTheYears.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/overtheyears2.css' %}" />
-  <script src="{% static 'js/modernizr.js' %}"></script>
-  <script src="{% static 'js/pace.min.js' %}"></script>
-  <link rel="shortcut icon" href="{% static 'favicons/.-3397-favicon.ico' %}" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <title>Social Conclave | More About Us</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/overTheYears.css' %}" />
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/pace.min.js' %}"></script>
 
-  <link rel="icon" href="{% static 'favicons/.-9210-favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
 
-  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    crossorigin="anonymous"></script>
-
-  <!-- <script>
-    function getcoredetails(deptName) {
-      $.getJSON("team/" + deptName, function (items) {
-        allDept = {
-          SC: "Super Core",
-          Admin: "Admin",
-          AGM: "Artist And Guest Management",
-          DC: "Digital Creatives",
-          Hospitality: "Hospitality",
-          IHC: "In-House Creatives",
-          Informals: "Informals",
-          Logistics: "Logistics",
-          Marketing: "Marketing",
-          Photography: "Photography",
-          Publicity: "Publicity",
-          "R&D": "Research And Development",
-          SMCW: "Social Media & Content Writing",
-          Technical: "Technical",
-        };
-
-        infoId = {
-          SC: "content-provide4",
-          Informals: "content-provide3",
-          Technical: "content-provide2",
-          2021: "content-provide1",
-        };
-
-        infoIdValue = infoId[deptName];
-        const info = document.getElementById(infoIdValue);
-        info.innerHTML = "";
-        info.innerHTML = infoId[deptName];
-
-        for (var key in allDept) {
-          var deptNameH = document.createElement("h2");
-          deptNameH.classList.add("headingDept");
-          deptNameH.setAttribute("id", key);
-          deptNameH.innerHTML = allDept[key];
-          // info.appendChild(deptNameH);
-
-          for (var i = 0; i < items.length; i++) {
-            var coreData = items.filter(function (i) {
-              return i.fields.deptName == key;
-            });
-          }
-
-          var memberItemParent = document.createElement("div");
-          memberItemParent.classList.add("memberItemParent");
-
-          for (var i = 0; i < coreData.length; i++) {
-            var memberItem = document.createElement("div");
-            memberItem.classList.add("memberItem");
-            var imagePic = document.createElement("div");
-            imagePic.classList.add("imagePic");
-            var corePic = document.createElement("img");
-
-            /*corePic.setAttribute('src', "{% static 'images/Departments/test3.jpg' %}".replace('test3', items[i].fields.firstName.toLowerCase() + "_" + items[i].fields.lastName.toLowerCase()));*/
-
-            corePic.setAttribute("src", "{% static 'images/test.jfif' %}");
-
-            imagePic.appendChild(corePic);
-            memberItem.appendChild(imagePic);
-
-            var contentMem = document.createElement("div");
-            contentMem.classList.add("contentMem");
-
-            var nameh2 = document.createElement("h2");
-            nameh2.classList.add("name");
-            nameh2.innerHTML =
-              coreData[i].fields.firstName +
-              " " +
-              coreData[i].fields.lastName;
-            var surname = document.createElement("h4");
-            surname.innerHTML = coreData[i].fields.position;
-
-            var social = document.createElement("div");
-            social.classList.add("social");
-
-            var linkedIn = document.createElement("a");
-            var insta = document.createElement("a");
-            linkedIn.setAttribute("href", coreData[i].fields.linkedIn);
-            insta.setAttribute("href", coreData[i].fields.instagram);
-            var linPic = document.createElement("img");
-            var instaPic = document.createElement("img");
-            linPic.setAttribute("src", "{% static 'images/linkedin.png' %}");
-            instaPic.setAttribute(
-              "src",
-              "{% static 'images/instagram.png' %}"
-            );
-            instaPic.classList.add("instagram");
-
-            linkedIn.appendChild(linPic);
-            insta.appendChild(instaPic);
-            social.appendChild(linkedIn);
-            social.appendChild(insta);
-
-            var para = document.createElement("p");
-            para.classList.add("text1");
-            para.innerHTML =
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, consequatur? Porro dignissimos perferendis rem corrupti.Numquam magnam repellat soluta recusandae.";
-
-            contentMem.appendChild(nameh2);
-            contentMem.appendChild(surname);
-            contentMem.appendChild(social);
-            contentMem.appendChild(para);
-
-            memberItem.appendChild(contentMem);
-            memberItemParent.appendChild(memberItem);
-          }
-          info.appendChild(memberItemParent);
-        }
-      });
-    }
-
-    // function coreName() {
-
-    //   allDept = {
-    //     "SC": "Super Core",
-    //     "Admin": "Admin",
-    //     "AGM": "Artist And Guest Management",
-    //     "DC": "Digital Creatives",
-    //     "Hospitality": "Hospitality",
-    //     "IHC": "In-House Creatives",
-    //     "Informals": "Informals",
-    //     "Logistics": "Logistics",
-    //     "Marketing": "Marketing",
-    //     "Photography": "Photography",
-    //     "Publicity": "Publicity",
-    //     "R&D": "Research And Development",
-    //     "SMCW": "Social Media & Content Writing",
-    //     "Technical": "Technical"
-    //   }
-
-    //   var coreNames = document.getElementById("coreNames");
-
-    //   for (var key in allDept) {
-    //     var deptNameH = document.createElement('a');
-    //     deptNameH.classList.add('headingDept');
-    //     deptNameH.classList.add('headingDept1');
-    //     idContent = "#" + key;
-    //     deptNameH.setAttribute("href", idContent);
-    //     deptNameH.setAttribute("target", "_self");
-    //     deptNameH.innerHTML = allDept[key];
-
-    //     coreNames.appendChild(deptNameH);
-    //   }
-
-    // }
-
-    function getagendasdetails(year) {
-      $.getJSON("agendas/" + year, function (items) {
-        infoId = {
-          2018: "content-provideA4",
-          2019: "content-provideA3",
-          2020: "content-provideA2",
-          2021: "content-provideA1",
-        };
-
-        infoIdValue = infoId[year];
-        const info = document.getElementById(infoIdValue);
-        info.innerHTML = "";
-
-        var agendasContainer = document.createElement("div");
-        agendasContainer.classList.add("agendasContainer");
-
-        for (var i = 0; i < items.length; i++) {
-          var agendasItems = document.createElement("div");
-          agendasItems.classList.add("agendasItems");
-
-          var logo = document.createElement("div");
-          logo.classList.add("logo");
-
-          var logoPic = document.createElement("img");
-          logoPic.setAttribute("src", "{% static 'images/test.jfif' %}");
-
-          logo.appendChild(logoPic);
-          agendasItems.appendChild(logo);
-
-          var title = document.createElement("div");
-          title.classList.add("title");
-          title.innerHTML = items[i].fields.title;
-          agendasItems.appendChild(title);
-
-          var description = document.createElement("div");
-          description.classList.add("description");
-          description.innerHTML = items[i].fields.description;
-          agendasItems.appendChild(description);
-
-          var shape = document.createElement("div");
-          shape.classList.add("shape");
-
-          var hexa = document.createElement("div");
-          hexa.classList.add("hexa");
-          hexa.classList.add("gon");
-          shape.appendChild(hexa);
-
-          agendasItems.appendChild(shape);
-          agendasContainer.appendChild(agendasItems);
-        }
-
-        info.appendChild(agendasContainer);
-      });
-    }
-  </script> -->
 </head>
 
-<body id="top" class="overTheYears" onload="getcoredetails(2021); getagendasdetails(2021); coreName();">
-  <header class="s-header">
-    <div class="header-logo">
-      <a class="site-logo" href="{% url 'main:landing-page' %}">
-        <img src="{% static 'images/images-logo.png' %}" alt="Homepage" /></a>
-    </div>
-    <nav class="header-nav1">
-      <div class="header-nav__content1">
-        <ul class="header-nav__list">
-          <li class="current">
-            <a class="smoothscroll" href="#agendasId" title="Our Agendas">Agendas</a>
-          </li>
-          <li>
-            <a class="smoothscroll" href="#teamsId" title="Our Team">Our Team</a>
-          </li>
+<body id="top" class="overTheYears">
+    <header class="s-header">
+        <div class="header-logo">
+            <a class="site-logo" href="{% url 'main:landing-page' %}">
+                <img src="{% static 'images/images-logo.png' %}" alt="Homepage" /></a>
+        </div>
+        <nav class="header-nav1">
+            <div class="header-nav__content1">
+                <ul class="header-nav__list">
+                    <li class="current">
+                        <a class="smoothscroll" href="#agendasId" title="Our Agendas">Agendas</a>
+                    </li>
+                    <li>
+                        <a class="smoothscroll" href="#teamsId" title="Our Team">Our Team</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--  -->
+
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000" data-position-y="center">
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+        <div class="home-content">
+            <div class="row home-content__main">
+                <h3>Welcome to Social Conclave</h3>
+                <h1 style="margin-bottom: 0px">
+                    We strive to spread smiles <br> and impact lives,
+                </h1>
+                <h1 style="margin-top: 0px">ONE PROBLEM AT A TIME.<br></h1>
+                <div class="home-content__buttons">
+                    <a href="/register" class="btn btn--stroke">Register</a>
+                    <a href="{% url 'main:landing-page' %}" class="btn btn--stroke">Home</a>
+                </div>
+            </div>
+            <div class="home-content__scroll">
+                <a href="#services" class="scroll-link smoothscroll">
+                    <span>Scroll Down</span>
+                </a>
+            </div>
+            <div class="home-content__line"></div>
+        </div>
+        <ul class="home-social">
+            <li>
+                <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
+            </li>
+            <li>
+                <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></a>
+            </li>
         </ul>
-      </div>
-    </nav>
-  </header>
+    </section>
 
-  <!--  -->
+    <!--  -->
 
-  <section id="home" class="s-home target-section" data-parallax="scroll"
-    data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000"
-    data-position-y="center">
-    <div class="overlay"></div>
-    <div class="shadow-overlay"></div>
-    <div class="home-content">
-      <div class="row home-content__main">
-        <h3>Welcome to Social Conclave</h3>
-        <h1 style="margin-bottom: 0px">
-          We strive to spread smiles <br />
-          and impact lives,
-        </h1>
-        <h1 style="margin-top: 0px">ONE PROBLEM AT A TIME. <br /></h1>
-        <div class="home-content__buttons">
-          <a href="/register" class="btn btn--stroke"> Register </a>
-          <a href="{% url 'main:landing-page' %}" class="btn btn--stroke">
-            Home
-          </a>
-        </div>
-      </div>
-      <div class="home-content__scroll">
-        <a href="#agendasId" class="scroll-link smoothscroll">
-          <span>Scroll Down</span>
-        </a>
-      </div>
-      <div class="home-content__line"></div>
-    </div>
-    <ul class="home-social">
-      <li>
-        <a href="https://facebook.com/socialconclave" target="_blank"><i class="fa fa-facebook"
-            aria-hidden="true"></i><span>Facebook</span></a>
-      </li>
-      <li>
-        <a href="https://twitter.com/social_conclave" target="_blank"><i class="fa fa-twitter"
-            aria-hidden="true"></i><span>Twiiter</span></a>
-      </li>
-      <li>
-        <a href="https://instagram.com/socialconclave" target="_blank"><i class="fa fa-instagram"
-            aria-hidden="true"></i><span>Instagram</span></a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/company/socialconclave/" target="_blank"><i class="fa fa-linkedin"
-            aria-hidden="true"></i><span>LinkedIn</span></a>
-      </li>
-    </ul>
-  </section>
-
-  <!--  -->
-
-  <section id="services" class="s-services">
-    <div class="provide" id="agendasId">
-      <div class="header">
-        <span>Over The Years</span>
-        <h2>Our Agendas</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-          blanditiis dolorum neque praesentium repellat laboriosam iure
-          ducimus fugiat amet! Nostrum aut voluptatem blanditiis aperiam
-          deserunt quo optio cum dolorem dolores!
-        </p>
-      </div>
-      <script src="{% static 'js/provide.js' %}"></script>
-      <div class="menu">
-        <!-- <div class="points">
-          <li>
-            <a href="" class="provide-listA active-provide" id="provide-listA1"
-              onclick="changeActiveAgendas('provide-listA1', 'content-provideA1'); getagendasdetails(2021); return false;">2021</a>
-          </li>
-
-          <li>
-            <a href="" class="provide-listA" id="provide-listA2"
-              onclick="changeActiveAgendas('provide-listA2', 'content-provideA2'); getagendasdetails(2020); return false;">2020</a>
-          </li>
-
-          <li>
-            <a href="" class="provide-listA" id="provide-listA3"
-              onclick="changeActiveAgendas('provide-listA3', 'content-provideA3'); getagendasdetails(2019); return false;">2019</a>
-          </li>
-
-          <li>
-            <a href="" class="provide-listA" id="provide-listA4"
-              onclick="changeActiveAgendas('provide-listA4', 'content-provideA4'); getagendasdetails(2018); return false;">2018</a>
-          </li>
-        </div> -->
-        <div class="vertical-bar">
-          <div class="parent-div-years">
-            <ul>
-              <li class="active">
-                <a href="#"><span></span><span></span> 2018</a>
-              </li>
-              <li>
-                <a href="#"><span></span><span></span> 2019</a>
-              </li>
-              <li>
-                <a href="#"><span></span><span></span> 2020</a>
-              </li>
-              <li>
-                <a href="#"><span></span><span></span> 2021</a>
-              </li>
-            </ul>
-          </div>
-          <div class="explain-provide">
-            <div class="content-provide agendasContent" id="content-provideA1">
-              <div class="agendasContainer">
-                <!-- <div class="agendasItems">
-                  <div class="logo">SC</div>
-                  <div class="title">Title</div>
-                  <div class="description">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, perspiciatis!
-                  </div>
-                  <div class="shape">
-                    <div class="hexa gon"></div>
-                  </div>
-                </div> -->
-              </div>
+    <section id="services" class="s-services">
+        <div class="provide" id="teamsId">
+            <div class="header">
+                <span>Over The Years</span>
+                <h2>Team Conclave 2020</h2>
+                <p>
+                    We at Conclave believe in doing our bit to bring about a big change one problem at a time
+                </p>
             </div>
+            <div class="team2021">
+                <div class="supercore">
+                    <div class="sc-block">
+                        <div class="sc-block-image">
+                            <div class="block-image">
+                                <img src="{% static 'images/team/supercore/Rohit.webp' %}">
+                            </div>
+                        </div>
+                        <div class="sc-block-dscp">
+                            <div class="post">
+                                <h1>
+                                    Chairperson:
+                                </h1>
+                            </div>
+                            <div class="name">
+                                <h2>
+                                    Rishabh<br>Reddy
+                                </h2>
+                            </div>
+                            <div class="about">
+                                <h3>
+                                    Rishabh's ideology and knowledge about each area of work has always made him the pushing force of Social Conclave since it’s birth and now as the Chairperson of this conference. There is no man we know more affectionate than Rishabh, he is the only one
+                                    who can help you out no matter what you need. He is the true leader of a team and he treats his team like a family which makes him so loved by everyone. It is only people with a plan of action who are able to achieve
+                                    heights as great as Rishabh already has.
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-block">
+                        <div class="sc-block-image">
+                            <div class="block-image">
+                                <img src="{% static 'images/team/supercore/Rohit.webp' %}">
+                            </div>
+                        </div>
+                        <div class="sc-block-dscp">
+                            <div class="post">
+                                <h1>
+                                    Chairperson:
+                                </h1>
+                            </div>
+                            <div class="name">
+                                <h2>
+                                    Rishabh<br>Reddy
+                                </h2>
+                            </div>
+                            <div class="about">
+                                <h3>
+                                    Rishabh's ideology and knowledge about each area of work has always made him the pushing force of Social Conclave since it’s birth and now as the Chairperson of this conference. There is no man we know more affectionate than Rishabh, he is the only one
+                                    who can help you out no matter what you need. He is the true leader of a team and he treats his team like a family which makes him so loved by everyone. It is only people with a plan of action who are able to achieve
+                                    heights as great as Rishabh already has.
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-block">
+                        <div class="sc-block-image">
+                            <div class="block-image">
+                                <img src="{% static 'images/team/supercore/Rohit.webp' %}">
+                            </div>
+                        </div>
+                        <div class="sc-block-dscp">
+                            <div class="post">
+                                <h1>
+                                    Chairperson:
+                                </h1>
+                            </div>
+                            <div class="name">
+                                <h2>
+                                    Rishabh<br>Reddy
+                                </h2>
+                            </div>
+                            <div class="about">
+                                <h3>
+                                    Rishabh's ideology and knowledge about each area of work has always made him the pushing force of Social Conclave since it’s birth and now as the Chairperson of this conference. There is no man we know more affectionate than Rishabh, he is the only one
+                                    who can help you out no matter what you need. He is the true leader of a team and he treats his team like a family which makes him so loved by everyone. It is only people with a plan of action who are able to achieve
+                                    heights as great as Rishabh already has.
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc-block">
+                        <div class="sc-block-image">
+                            <div class="block-image">
+                                <img src="{% static 'images/team/supercore/Rohit.webp' %}">
+                            </div>
+                        </div>
+                        <div class="sc-block-dscp">
+                            <div class="post">
+                                <h1>
+                                    Chairperson:
+                                </h1>
+                            </div>
+                            <div class="name">
+                                <h2>
+                                    Rishabh<br>Reddy
+                                </h2>
+                            </div>
+                            <div class="about">
+                                <h3>
+                                    Rishabh's ideology and knowledge about each area of work has always made him the pushing force of Social Conclave since it’s birth and now as the Chairperson of this conference. There is no man we know more affectionate than Rishabh, he is the only one
+                                    who can help you out no matter what you need. He is the true leader of a team and he treats his team like a family which makes him so loved by everyone. It is only people with a plan of action who are able to achieve
+                                    heights as great as Rishabh already has.
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="core">
+                        <div class="dept-box">
+                            <div class="ribbon"></div>
+                            <div class="dept">
+                                <h1 class="deptName">RESEARCH &amp;<br> DEVELOPMENT</h1>
+                                <h1 class="deptPost">HEAD</h1>
+                                <h1 class="deptNames">Abhishek Doppalapudi<br>Avi Sogani</h1>
+                                <h1 class="deptPost">SUB HEAD</h1>
+                                <h1 class="deptNames">Varun Gupta <br>Avani Lakhe</h1>
+                            </div>
+                        </div>
+                        <div class="dept-box">
+                            <div class="ribbon"></div>
+                            <div class="dept">
+                                <h1 class="deptName">RESEARCH &amp;<br> DEVELOPMENT</h1>
+                                <h1 class="deptPost">HEAD</h1>
+                                <h1 class="deptNames">Abhishek Doppalapudi<br>Avi Sogani</h1>
+                                <h1 class="deptPost">SUB HEAD</h1>
+                                <h1 class="deptNames">Varun Gupta <br>Avani Lakhe</h1>
+                            </div>
+                        </div>
+                        <div class="dept-box">
+                            <div class="ribbon"></div>
+                            <div class="dept">
+                                <h1 class="deptName">RESEARCH &amp;<br> DEVELOPMENT</h1>
+                                <h1 class="deptPost">HEAD</h1>
+                                <h1 class="deptNames">Abhishek Doppalapudi<br>Avi Sogani</h1>
+                                <h1 class="deptPost">SUB HEAD</h1>
+                                <h1 class="deptNames">Varun Gupta <br>Avani Lakhe</h1>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="content-provide agendasContent hideClass" id="content-provideA2"></div>
+                </div>
 
-            <div class="content-provide agendasContent hideClass" id="content-provideA3"></div>
-
-            <div class="content-provide agendasContent hideClass" id="content-provideA4"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <br /><br />
-
-    <div class="provide" id="teamsId">
-      <div class="header">
-        <span>Over The Years</span>
-        <h2>Our Team</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-          blanditiis dolorum neque praesentium repellat laboriosam iure
-          ducimus fugiat amet! Nostrum aut voluptatem blanditiis aperiam
-          deserunt quo optio cum dolorem dolores!
-        </p>
-      </div>
-      <script src="{% static 'js/provide.js' %}"></script>
-      <div class="menu">
-        <div class="vertical-bar2">
-          <div class="parent-div-years">
-            <ul>
-              <li class="active">
-                <a href="#"><span></span><span></span> Super Core</a>
-              </li>
-              <li>
-                <a href="#"><span></span><span></span> Admin</a>
-              </li>
-              <li>
-                <a href="#"><span></span><span></span> AGM</a>
-              </li>
-              <li>
-                <a href="#"><span></span><span></span> Digital Creatives</a>
-              </li>
-              <li>
-                <a href="#"><span></span><span></span> Hospitality</a>
-              </li>
-              <li>
-                <a href="#"><span></span><span></span> In-House Creatives</a>
-              </li>
-              <li>
-                <a href="#"><span></span><span></span> Informals</a>
-              </li>
-              <li>
-                <a href="#"><span></span><span></span> Logistics</a>
-              </li>
-              <li>
-                <a href="#"><span></span><span></span> Marketing</a>
-              </li>
-              <li>
-                <a href="#"><span></span><span></span> Photography</a>
-              </li>
-              <li>
-                <a href="#"><span></span><span></span> Publicity</a>
-              </li>
-              <li>
-                <a href="#"><span></span><span></span> R&D</a>
-              </li>
-              <li>
-                <a href="#"><span></span><span></span> SMCW</a>
-              </li>
-              <li>
-                <a href="#"><span></span><span></span> Technical</a>
-              </li>
-            </ul>
-          </div>
-          <div class="explain-provide">
-            <div class="content-provide teamsContent" id="content-provide1">
-              <div class="memberItem">
-                <div class="imagePic">
-                  <img src="{% static 'images/test.jfif' %}" alt="" />
-                </div>
-                <div class="contentMem">
-                  <h2 class="name">Jane</h2>
-                  <h4>Des</h4>
-                  <div class="social">
-                    <a href="#"><img src="{% static 'images/linkedin.png' %}" alt="" /></a>
-                    <a href="#"><img class="instagram" src="{% static 'images/instagram.png' %}" alt="" /></a>
-                  </div>
-                  <p class="text1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Numquam, consequatur? Porro dignissimos perferendis rem
-                    corrupti. Numquam magnam repellat soluta recusandae.
-                  </p>
-                </div>
-              </div>
-              <div class="memberItem">
-                <div class="imagePic">
-                  <img src="{% static 'images/test.jfif' %}" alt="" />
-                </div>
-                <div class="contentMem">
-                  <h2 class="name">Jane</h2>
-                  <h4>Des</h4>
-                  <div class="social">
-                    <a href="#"><img src="{% static 'images/linkedin.png' %}" alt="" /></a>
-                    <a href="#"><img class="instagram" src="{% static 'images/instagram.png' %}" alt="" /></a>
-                  </div>
-                  <p class="text1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Numquam, consequatur? Porro dignissimos perferendis rem
-                    corrupti. Numquam magnam repellat soluta recusandae.
-                  </p>
-                </div>
-              </div>
-              <div class="memberItem">
-                <div class="imagePic">
-                  <img src="{% static 'images/test.jfif' %}" alt="" />
-                </div>
-                <div class="contentMem">
-                  <h2 class="name">Jane</h2>
-                  <h4>Des</h4>
-                  <div class="social">
-                    <a href="#"><img src="{% static 'images/linkedin.png' %}" alt="" /></a>
-                    <a href="#"><img class="instagram" src="{% static 'images/instagram.png' %}" alt="" /></a>
-                  </div>
-                  <p class="text1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Numquam, consequatur? Porro dignissimos perferendis rem
-                    corrupti. Numquam magnam repellat soluta recusandae.
-                  </p>
-                </div>
-              </div>
-              <div class="memberItem">
-                <div class="imagePic">
-                  <img src="{% static 'images/test.jfif' %}" alt="" />
-                </div>
-                <div class="contentMem">
-                  <h2 class="name">Jane</h2>
-                  <h4>Des</h4>
-                  <div class="social">
-                    <a href="#"><img src="{% static 'images/linkedin.png' %}" alt="" /></a>
-                    <a href="#"><img class="instagram" src="{% static 'images/instagram.png' %}" alt="" /></a>
-                  </div>
-                  <p class="text1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Numquam, consequatur? Porro dignissimos perferendis rem
-                    corrupti. Numquam magnam repellat soluta recusandae.
-                  </p>
-                </div>
-              </div>
-              <div class="memberItem">
-                <div class="imagePic">
-                  <img src="{% static 'images/test.jfif' %}" alt="" />
-                </div>
-                <div class="contentMem">
-                  <h2 class="name">Jane</h2>
-                  <h4>Des</h4>
-                  <div class="social">
-                    <a href="#"><img src="{% static 'images/linkedin.png' %}" alt="" /></a>
-                    <a href="#"><img class="instagram" src="{% static 'images/instagram.png' %}" alt="" /></a>
-                  </div>
-                  <p class="text1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Numquam, consequatur? Porro dignissimos perferendis rem
-                    corrupti. Numquam magnam repellat soluta recusandae.
-                  </p>
-                </div>
-              </div>
             </div>
-
-            <div class="content-provide hideClass teamsContent" id="content-provide2"></div>
-
-            <div class="content-provide hideClass teamsContent" id="content-provide3"></div>
-
-            <div class="content-provide hideClass teamsContent" id="content-provide4"></div>
-          </div>
         </div>
-        <!-- <div class="points">
-          <li>
-            <a href="" class="provide-list active-provide" id="provide-list1"
-              onclick="changeActive('provide-list1', 'content-provide1'); getcoredetails('SC'); return false;">SC</a>
-          </li>
+    </section>
 
-          <li>
-            <a href="" class="provide-list" id="provide-list2"
-              onclick="changeActive('provide-list2', 'content-provide2'); getcoredetails('Informals'); return false;">Informals</a>
-          </li>
+    <!--  -->
 
-          <li>
-            <a href="" class="provide-list" id="provide-list3"
-              onclick="changeActive('provide-list3', 'content-provide3'); getcoredetails('Technical'); return false;">Technical</a>
-          </li>
-        </div> -->
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!--  -->
-
-  <footer>
-    <div class="row footer-main">
-      <div class="col-six tab-full left footer-desc">
-        <div class="footer-logo"></div>
-        Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt
-        nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec,
-        egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh
-        pulvinar a. Nulla porttitor accumsan tincidunt. Nulla porttitor
-        accumsan tincidunt. Quaerat voluptas autem necessitatibus vitae aut.
-      </div>
-      <div class="col-six tab-full right footer-subscribe">
-        <h4>Get Notified</h4>
-        <p>
-          Quia quo qui sed odit. Quaerat voluptas autem necessitatibus vitae
-          aut non alias sed quia. Ut itaque enim optio ut excepturi deserunt
-          iusto porro.
-        </p>
-        <div class="subscribe-form">
-          <form id="mc-form" class="group" novalidate="true">
-            <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address"
-              required="" /><input type="submit" name="subscribe" value="Subscribe" /><label for="mc-email"
-              class="subscribe-message"></label>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="row footer-bottom">
-      <div class="col-twelve">
-        <div class="copyright">
-          <span>&copy; Copyright Glint 2017</span>
-          <span>Site Template by
-            <a href="https://www.colorlib.com/">Colorlib</a></span>
-        </div>
-        <div class="go-top">
-          <a class="smoothscroll registerTop" title="Back to Top" href="#top">Register</a>
-          <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
-    <div class="pswp__bg"></div>
-    <div class="pswp__scroll-wrap">
-      <div class="pswp__container">
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-      </div>
-      <div class="pswp__ui pswp__ui--hidden">
-        <div class="pswp__top-bar">
-          <div class="pswp__counter"></div>
-          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-          <button class="pswp__button pswp__button--share" title="Share"></button>
-          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-          <div class="pswp__preloader">
-            <div class="pswp__preloader__icn">
-              <div class="pswp__preloader__cut">
-                <div class="pswp__preloader__donut"></div>
-              </div>
+    <footer>
+        <div class="row footer-main">
+            <div class="col-six tab-full left footer-desc">
+                <div class="footer-logo"></div>
+                Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt.
+                Nulla porttitor accumsan tincidunt. Quaerat voluptas autem necessitatibus vitae aut.
             </div>
-          </div>
+            <div class="col-six tab-full right footer-subscribe">
+                <h4>Get Notified</h4>
+                <p>
+                    Quia quo qui sed odit. Quaerat voluptas autem necessitatibus vitae aut non alias sed quia. Ut itaque enim optio ut excepturi deserunt iusto porro.
+                </p>
+                <div class="subscribe-form">
+                    <form id="mc-form" class="group" novalidate="true">
+                        <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="" /><input type="submit" name="subscribe" value="Subscribe" /><label for="mc-email" class="subscribe-message"></label>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-          <div class="pswp__share-tooltip"></div>
+        <div class="row footer-bottom">
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>&copy; Copyright Glint 2017</span>
+                    <span>Site Template by <a href="https://www.colorlib.com/">Colorlib</a></span>
+                </div>
+                <div class="go-top">
+                    <a class="smoothscroll registerTop" title="Register here for Concalve 2021" href="" style="">Register</a>
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
         </div>
-        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-        <div class="pswp__caption">
-          <div class="pswp__caption__center"></div>
+    </footer>
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 
-  <div id="preloader">
-    <div id="loader">
-      <div class="line-scale-pulse-out">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <script data-cfasync="false" src="{% static 'js/cloudflare-static-email-decode.min.js' %}"></script>
-  <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
-  <script src="{% static 'js/9959-js-plugins.js' %}"></script>
-  <script src="{% static 'js/320-js-main.js' %}"></script>
+    <script data-cfasync="false" src="{% static 'js/cloudflare-static-email-decode.min.js' %}"></script>
+    <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/9959-js-plugins.js' %}"></script>
+    <script src="{% static 'js/320-js-main.js' %}"></script>
 </body>
 
 </html>

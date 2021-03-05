@@ -11,20 +11,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <!-- <link rel="stylesheet" href="http://cdn.arshen.ir/micon/3.0.168/dist/micon/css/micon.min.css"> -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
-
     <script src="{% static 'js/modernizr.js' %}"></script>
     <script src="{% static 'js/pace.min.js' %}"></script>
-    <!-- <link rel="shortcut icon" href="{% static 'favicons/.-3397-favicon.ico' %}" type="image/x-icon">
-    <link rel="icon" href="{% static 'favicons/.-9210-favicon.ico' %}" type="image/x-icon"> -->
+
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
     <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
-    <!-- <link rel="manifest" href="{% static 'site.webmanifest' %}"> -->
 
 </head>
 
@@ -33,7 +29,7 @@
     <header class="s-header">
         <div class="header-logo">
             <a class="site-logo" href="{% url 'main:landing-page' %}">
-                <img style="max-width:75%;margin-left:-15px;" src="{% static 'images/images-logo.png' %}" alt="Homepage"></a>
+                <img src="{% static 'images/images-logo.png' %}" alt="Homepage"></a>
         </div>
         <nav id="bigone" class="header-nav1">
             <div class="header-nav__content1">
@@ -318,31 +314,38 @@
         </div>
         <div class="row clients-testimonials" data-aos="fade-up">
             <div class="col-full">
+                <h3 class="subhead testi">Testimonials</h3>
                 <div class="testimonials">
                     <div class="testimonials__slide">
-                        <p>Qui ipsam temporibus quisquam vel. Maiores eos cumque distinctio nam accusantium ipsum. Laudantium quia consequatur molestias delectus culpa facere hic dolores aperiam. Accusantium quos qui praesentium corpori. Excepturi nam cupiditate
-                            culpa doloremque deleniti repellat.</p>
-                        <img src="{% static 'images/avatars/user-01.jpg' %}" alt="Author image" class="testimonials__avatar">
-                        <div class="testimonials__info">
-                            <span class="testimonials__name">Tim Cook</span>
-                            <span class="testimonials__pos">CEO, Apple</span>
-                        </div>
-                    </div>
-                    <div class="testimonials__slide">
-                        <p>Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci. Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam temporibus quisquam vel.</p>
-                        <img src="{% static 'images/avatars/user-05.jpg' %}" alt="Author image" class="testimonials__avatar">
-                        <div class="testimonials__info">
-                            <span class="testimonials__name">Sundar Pichai</span>
-                            <span class="testimonials__pos">CEO, Google</span>
-                        </div>
-                    </div>
-                    <div class="testimonials__slide">
-                        <p>Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam. Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
+                        <p>
+                            I have been participating in various MUNs and summits since my school days,But Social conclave was something much different and diverse from all those competitions. The whole event was properly managed and hosted. And the informals were just awesome.
+                            Something Unique abut the conclave was that it takes the best solutions and try to implement it. The competition is an amalgamation of various aspects such as report writing, group discussions, presentation and solution making
+                            along with an actual field visit to places with which the committee is planing to deal with, which actually helps you to know the ground reality of the topic.
                         </p>
-                        <img src="{% static 'images/avatars/user-02.jpg' %}" alt="Author image" class="testimonials__avatar">
                         <div class="testimonials__info">
-                            <span class="testimonials__name">Satya Nadella</span>
-                            <span class="testimonials__pos">CEO, Microsoft</span>
+                            <span class="testimonials__name">Gandharva Shelar</span>
+                        </div>
+                    </div>
+                    <div class="testimonials__slide">
+                        <p>
+                            Social Conclave was my very first summit that I attended. I was very nervous and didn't know anything about the concept of a summit. On day one we witnessed many intellectual discussions about various topics. On the second day we were taken on a field
+                            visit to our respective area of concern. On the third day we had to submit our final presentation on the the topic that we were working on. When our group had finished the day's proceedings and were sitting in the closing ceremony
+                            I realised that I was nervous earlier for no reason. Social Conclave was a experience that I could never forget in the entirety of my life.
+                        </p>
+                        <div class="testimonials__info">
+                            <span class="testimonials__name">Rithvik Shivaprakash</span>
+                        </div>
+                    </div>
+                    <div class="testimonials__slide">
+                        <p>
+                            Being a team of freshers last year, taking part in the Social Conclave hosted by the Social Impact was a great end to our first year. Not only the interactive session with experts in fields like Substance Abuse, Urban Sanitation etc. which deals with
+                            the problems occuring currently in the society and it also create awareness amongst the students which helped us to gain important knowledge about social issues. The 3 day event was a learning curve in every way with activities
+                            like the Panchayat where we discussed the pros and cons of the social issues, the report making session where we documented our research and the presentation where we presented the solutions about overcoming the issue from
+                            its root. Social Conclave is a one of a kind event and we are glad to have been a part. So in conclusion, the event was not just about familiarising ourselves with the issues but mainly about how to act on the issues and find
+                            solutions. Looking forward to Social Conclave 2020.
+                        </p>
+                        <div class="testimonials__info">
+                            <span class="testimonials__name">Dhruv Pathak</span>
                         </div>
                     </div>
                 </div>
@@ -399,36 +402,29 @@
                 <div class="contact-info">
                     <h3 class="h6 hide-on-fullwidth">Contact Info</h3>
                     <div class="cinfo">
-                        <h5>Where to Find Us</h5>
+                        <h5>POORVA CHADHA</h5>
                         <p>
-                            1600 Amphitheatre Parkway<br> Mountain View, CA<br> 94043 US
+                            <a href="tel:+918828467640" style="color: rgba(255, 255, 255, 0.4);">+91-8828467640</a><br>spoorvachadha.nmims@gmail.com
                         </p>
                     </div>
                     <div class="cinfo">
-                        <h5>Email Us At</h5>
+                        <h5>SUNANDAN DASGUPTA</h5>
                         <p>
-                            <a href="email-protection.html" style="color: rgba(255, 255, 255, 0.4);" data-cfemail="44272b2a302527300423282d2a30372d30216a272b29">abcd@socialconclave.com</a><br><a href="email-protection.html" style="color: rgba(255, 255, 255, 0.4);"
-                                data-cfemail="c8a1a6aea788afa4a1a6bcbba1bcade6aba7a5">abcd@socialconclave.com</a>
-                        </p>
-                    </div>
-                    <div class="cinfo">
-                        <h5>Call Us At</h5>
-                        <p>
-                            Phone: (+63) 555 1212<br> Mobile: (+63) 555 0100<br> Fax: (+63) 555 0101
+                            <a href="tel:+919820934218" style="color: rgba(255, 255, 255, 0.4);">+91-9820934218</a><br>sunandandasgupta.nmims@gmail.com
                         </p>
                     </div>
                     <ul class="contact-social">
                         <li>
-                            <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
+                            <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
+                            <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                            <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></a>
+                            <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>

@@ -24,7 +24,6 @@ body {
 
 body {
     background: #111;
-    font-family: lora-regular, serif;
     font-size: 1.7rem;
     font-style: normal;
     font-weight: 400;
@@ -1383,6 +1382,11 @@ input::-moz-focus-inner {
     transition: all 0.3s ease-in-out;
 }
 
+.site-logo img {
+    max-width: 75%;
+    margin-left: -15px;
+}
+
 .header-nav {
     background: #0c0c0c;
     color: rgba(255, 255, 255, 0.25);
@@ -2256,7 +2260,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .s-services {
-    padding-top: 6.2rem;
+    padding-top: 6rem;
     padding-bottom: 13.2rem;
     background-color: #fff;
     color: #757575;
@@ -2652,6 +2656,11 @@ html.no-csstransitions .home-content__main {
     opacity: 1;
 }
 
+.testi {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}
+
 .clients-testimonials {
     margin-top: 4.2rem;
     padding-top: 7.2rem;
@@ -2680,10 +2689,10 @@ html.no-csstransitions .home-content__main {
 
 .clients-testimonials .testimonials p {
     font-family: lora-regular, serif;
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 1.8;
     color: #555;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 }
 
 .clients-testimonials .testimonials__slide {
@@ -2703,6 +2712,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .clients-testimonials .testimonials__name {
+    font-size: 3rem;
     font-family: montserrat-semibold, sans-serif;
     color: #000;
 }
@@ -2998,6 +3008,14 @@ html.no-csstransitions .home-content__main {
 
 .contact-secondary .cinfo {
     margin-bottom: 4.8rem;
+}
+
+.contact-secondary .cinfo p {
+    margin-bottom: 0;
+}
+
+.contact-secondary .cinfo h5 {
+    margin-bottom: 1.1rem;
 }
 
 .contact-social {
@@ -3382,16 +3400,14 @@ footer .row {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     float: right;
-    border-radius: 50%;
+    border: 2px solid;
+    /* border-radius: 50%; */
 }
 
 .go-top .registerTop {
     height: 60px;
     width: 150px;
     float: left;
-    font-weight: 600;
-    color: #39b54a;
-    border: 2px solid #000;
 }
 
 .go-top a i,

@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} {% load crispy_forms_tags %}
 
 <!DOCTYPE html>
 <html>
@@ -146,209 +146,21 @@
             </div>
 
             <div class="multisteps-form__panel js-active" data-animation="scaleIn">
-                <form>
-                    <div class="lb">
-                        <h3 class="st">GENERAL INFORMATION</h3>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Full name</label><br>
-                                <input type="text" style="margin-left:0.3%;width:100%;" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label>Email-ID</label><br>
-                                <input type="email" style="margin-left:0.3%;width:100%;" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Mobile Number</label><br>
-                                <input type="number" style="margin-left:0.3%;width:100%;" min=1000000000 max=9999999999 required>
-                            </div>
-                            <div class="col-md-6">
-                                <label>Birthday</label><br>
-                                <input type="date" style="margin-left:0.3%;width:100%;" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Gender</label><br>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <input type="radio" name="gender" value="M" style="margin-left:0.3%;" required> Male
-                                    </div>
-                                    <div class="col-md-4">
-                                        <input type="radio" name="gender" value="F" style="margin-left:0.3%;"> Female
-                                    </div>
-                                    <div class="col-md-4">
-                                        <input type="radio" name="gender" value="O" style="margin-left:0.3%;"> Other
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6"></div>
-                        </div>
-                    </div>
-                </form>
-
-                <form>
-                    <div class="lb">
-                        <h3 class="st">EDUCATIONAL INFORMATION</h3>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Name of College/School</label><br>
-                                <input type="text" style="margin-left:0.3%;width:100%;" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label>Course</label><br>
-                                <input type="text" style="margin-left:0.3%;width:100%;" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Year of education</label><br>
-                                <input type="number" style="margin-left:0.3%;width:100%;" min=1 max=12 required>
-                            </div>
-                            <div class="col-md-6">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-
-                <form>
-                    <div class="lb">
-                        <h3 class="st">TOPIC INFORMATION</h3>
-                        <p style="margin:0 0 1em 0;">Please choose your 4 most preffered topics</p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Prefference 1</label><br>
-                                <select id="p1" name="p1" required>
-									<option value="volvo">Volvo</option>
-									<option value="saab">Saab</option>
-									<option value="fiat">Financial Independance</option>
-									<option value="audi">Audi</option>
-								</select>
-                            </div>
-                            <div class="col-md-6">
-                                <label>Prefference 2</label><br>
-                                <select id="p2" name="p2" required>
-									<option value="volvo">Volvo</option>
-									<option value="saab">Saab</option>
-									<option value="fiat">Financial Independance</option>
-									<option value="audi">Audi</option>
-								</select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Prefference 3</label><br>
-                                <select id="p3" name="p3" required>
-										<option value="volvo">Volvo</option>
-										<option value="saab">Saab</option>
-										<option value="fiat">Financial Independance</option>
-										<option value="audi">Audi</option>
-									</select>
-                            </div>
-                            <div class="col-md-6">
-                                <label>Prefference 4</label><br>
-                                <select id="p4" name="p4" required>
-									<option value="volvo">Volvo</option>
-									<option value="saab">Saab</option>
-									<option value="fiat">Financial Independance</option>
-									<option value="audi">Audi</option>
-								</select>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-
-                <form>
-                    <div class="lb">
-                        <h3 class="st">TEAM INFORMATION</h3>
-                        <p style="margin:0 0 1em 0;">Details about your teams and past experiences.Also note that each team is expected to have 4 to 7 members and each memeber has to register individually. If you wish to register individually or do not have a team, we will assign
-                            one to you based on your preference. </p><br>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Any past experiences in social service or public speaking?</label><br>
-                                <div class="row">
-                                    <div class="col-md-6" style="padding-top:0;">
-                                        <div class="row">
-                                            <div class="col-md-6" style="padding-top:0;">
-                                                <input type="radio" name="past1" value="Y" style="margin-left:0.3%;" onchange="f(1);" required> Yes
-                                            </div>
-                                            <div class="col-md-6" style="padding-top:0;">
-                                                <input type="radio" name="past1" value="N" style="margin-left:0.3%;" checked onchange="f(2);"> No
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6" id="dh">
-                                <label>More about it</label><br>
-                                <input type="text" style="margin-left:0.3%;width:100%;">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <br>
-                                <label>Do you require accomodation?</label><br>
-                                <div class="row">
-                                    <div class="col-md-6" style="padding-top:0;">
-                                        <div class="row">
-                                            <div class="col-md-6" style="padding-top:0;">
-                                                <input type="radio" name="acc" value="Y" style="margin-left:0.3%;" required> Yes
-                                            </div>
-                                            <div class="col-md-6" style="padding-top:0;">
-                                                <input type="radio" name="acc" value="N" style="margin-left:0.3%;"> No
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6"><br>
-                                <label>Do you have a team?</label><br>
-                                <div class="row">
-                                    <div class="col-md-6" style="padding-top:0;">
-                                        <div class="row">
-                                            <div class="col-md-6" style="padding-top:0;">
-                                                <input type="radio" name="t1" value="Y" style="margin-left:0.3%;" onchange="f(3);" required> Yes
-                                            </div>
-                                            <div class="col-md-6" style="padding-top:0;">
-                                                <input type="radio" name="t1" value="N" style="margin-left:0.3%;" checked onchange="f(4);"> No
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6" id="team"><br>
-                                <label>Team name?</label><br>
-                                <input type="text" style="margin-left:0.3%;width:100%;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="button-row d-flex mt-4" style="padding-right:2em;">
-                        <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
-                    </div>
-                    <br>
-                </form>
+                <div class="container" id="form">
+                    <form method="POST">
+                        {% csrf_token %} {{form|crispy}}
+                    </form>
+                </div>
             </div>
+
             <div class="multisteps-form__panel" data-animation="scaleIn">
                 Part 2
             </div>
+
             <div class="multisteps-form__panel" data-animation="scaleIn">
                 Part 3
             </div>
+
         </div>
     </div>
 
