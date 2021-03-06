@@ -16,6 +16,9 @@ def home(request):
     return render(request, 'blogs/bloghome.html', {'blogs': [1, 2, 3, 4, 5]})
 
 
-def blogview(request, blog):
-    blogs = Blog.objects.filter(slug__icontains=blog).first()
-    return render(request, 'blogs/blog.html', {'blog': blogs})
+# def blogview(request, blog):
+#     blogs = Blog.objects.filter(slug__icontains=blog).first()
+#     return render(request, 'blogs/blog.html', {'blog': blogs})
+
+def blogview(request):
+    return render(request, 'blogs/blog.html')

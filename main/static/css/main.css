@@ -1373,11 +1373,7 @@ input::-moz-focus-inner {
 
 .header-logo a {
     display: inline-block;
-    margin: 9px 0 0;
-    padding: 0;
-    outline: 0;
-    border: none;
-    width: 80px;
+    width: 197px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
@@ -1385,6 +1381,78 @@ input::-moz-focus-inner {
 .site-logo img {
     max-width: 75%;
     margin-left: -15px;
+}
+
+.headlinelogo {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    margin: 0 auto;
+    top: -11px;
+    left: 0;
+}
+
+#headlinelogocanvas {
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    z-index: 0;
+    top: -16px;
+    left: -4px;
+    opacity: 0.8;
+}
+
+.scEarth {
+    width: 62px;
+    height: 62px;
+    max-width: unset !important;
+    position: fixed;
+    margin-left: 0 !important;
+    top: -17px;
+    left: -5px;
+}
+
+.scLogotxt {
+    margin: 0;
+    position: fixed;
+    top: -7px;
+    left: 0;
+    margin-left: 67px !important;
+    max-width: unset !important;
+    width: 151px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .headlinelogo {
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .headlinelogo {
+        height: 50px;
+        width: 50px;
+        top: -11px;
+        left: 0;
+    }
+    #headlinelogocanvas {
+        height: 54px;
+        width: 54px;
+        top: -13px;
+        left: -3px;
+    }
+    .scEarth {
+        width: 58px;
+        height: 58px;
+        top: -15px;
+        left: -5px;
+    }
+    .scLogotxt {
+        margin: 0;
+        top: -6px;
+        left: 0;
+        width: 137px;
+    }
 }
 
 .header-nav {
@@ -1650,9 +1718,9 @@ input::-moz-focus-inner {
     }
     .header-logo {
         top: 5.4rem;
-        left: 3.5rem;
+        left: 2.57rem;
     }
-    .header-menu-toggle {
+    .head .header-menu-toggle {
         right: 25px;
     }
     .con {
@@ -2889,7 +2957,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .contact-content {
-    max-width: 1000px;
+    max-width: 1124px;
     background-color: rgba(0, 0, 0, 0.2);
     color: rgba(255, 255, 255, 0.4);
     padding-top: 6rem;

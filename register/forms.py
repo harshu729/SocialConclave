@@ -7,7 +7,7 @@ class DelegateForm(forms.ModelForm):
     class Meta:
         model = Delegate
         fields = ['name', 'age', 'email', 'phoneNumber', 'address',
-                  'gender', 'topicPref1', 'topicPref2', 'topicPref3', 'topicPref4', 'topicPref5', 'city', 'schoolName', 'courseName', 'yearGrad']
+                  'gender', 'topicPref1', 'topicPref2', 'topicPref3', 'city', 'schoolName', 'courseName', 'yearGrad']
         labels = {
             "name": "",
             "age": "",
@@ -18,8 +18,6 @@ class DelegateForm(forms.ModelForm):
             "topicPref1": "Enter First Preference",
             "topicPref2": "Enter Second Preference",
             "topicPref3": "Enter Third Preference",
-            "topicPref4": "Enter Fourth Preference",
-            "topicPref5": "Enter Fifth Preference",
             "city": "",
             "schoolName": "",
             "courseName": "",
@@ -49,6 +47,4 @@ class DelegateForm(forms.ModelForm):
             'topicPref1': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
             'topicPref2': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
             'topicPref3': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
-            'topicPref4': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
-            'topicPref5': forms.RadioSelect(attrs={'placeholder': 'Address', 'required': 'required'}),
         }

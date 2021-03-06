@@ -1,9 +1,9 @@
 from django.urls import path,include
-from . import views
+from .views import *
 from django.views.generic import TemplateView
 
 app_name='register'
 
 urlpatterns = [
-    path('',views.home,name='register-page'),
+    path('',Registration.as_view(),name='register-page'),
 ]
