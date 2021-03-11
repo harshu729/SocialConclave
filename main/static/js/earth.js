@@ -24,7 +24,7 @@ scene.add(light);
 
 var geometry = new THREE.SphereGeometry(2.15, 32, 32);
 // var texture = new new THREE.TextureLoader().load('../images/EarthTexture.png')
-var texture = new new THREE.TextureLoader().load('static/images/textures/earthtexture2.3.1.jpg')
+var texture = new new THREE.TextureLoader().load('../static/images/textures/earthtexture2.3.1.jpg')
 var material = new THREE.MeshPhongMaterial({
     map: texture,
     bumpMap: new THREE.TextureLoader('../images/textures/elev_bump_4k.jpg'),

@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1080px) {
     #bigone {
         display: none;
     }
@@ -7,7 +7,7 @@
     }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1080px) {
     #bigone {
         display: block;
     }
@@ -69,9 +69,9 @@
 }
 
 .ov a {
-    padding: 8px;
+    padding: 1rem;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 28px;
     color: black;
     font-family: montserrat-medium, sans-serif;
     display: block;

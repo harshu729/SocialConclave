@@ -9,6 +9,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="preload" href="{% static 'images/sclogo.png' %}" as="image">
+    <link rel="preload" href="{% static 'images/earthRing.png' %}" as="image">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -26,6 +32,7 @@
 
 <body id="top">
 
+    <!-- Header -->
     <header class="s-header">
         <div class="header-logo">
             <a class="site-logo" href="{% url 'main:landing-page' %}">
@@ -36,33 +43,42 @@
                 <img class="scLogotxt" src="{% static 'images/socialconclave.png' %}" alt="Homepage">
             </a>
         </div>
+        <!-- PC Nav -->
         <nav id="bigone" class="header-nav1">
             <div class="header-nav__content1">
                 <ul class="header-nav__list">
                     <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
                     <li><a class="smoothscroll" href="#about" title="about">About Us</a></li>
+                    <li><a class="smoothscroll" href="#services" title="blogs">Blogs</a></li>
                     <li><a class="smoothscroll" href="#works" title="works">Glimpse</a></li>
                     <li><a class="smoothscroll" href="#clients" title="clients">Affiliations</a></li>
                     <li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
+        <!-- /PC Nav -->
+        <!-- Mobile Nav -->
         <nav id="smallone" class="con" style="float:right;" onclick="myFunction();">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </nav>
+        <!-- /Mobile Nav -->
     </header>
+    <!-- /Header -->
 
+    <!-- Mobile Menu -->
     <div id="myNav" class="ov">
         <div class="ov-content">
             <a class="smoothscroll" href="#home" title="home" onclick="myFunction();">Home</a>
             <a class="smoothscroll" href="#about" title="about" onclick="myFunction();">About Us</a>
+            <a class="smoothscroll" href="#blog" title="blogs" onclick="myFunction();">Blog</a>
             <a class="smoothscroll" href="#works" title="works" onclick="myFunction();">Glimpse</a>
             <a class="smoothscroll" href="#clients" title="clients" onclick="myFunction();">Affiliations</a>
             <a class="smoothscroll" href="#contact" title="contact" onclick="myFunction();">Contact</a>
         </div>
     </div>
+    <!-- /Mobile Menu -->
 
     <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000" data-position-y="center">
         <div class="overlay"></div>
@@ -93,16 +109,20 @@
         </div>
         <ul class="home-social">
             <li>
-                <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
+                <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
+                        aria-hidden="true"></i><span>Facebook</span></a>
             </li>
             <li>
-                <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
+                <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
+                        aria-hidden="true"></i><span>Twitter</span></a>
             </li>
             <li>
-                <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
+                        aria-hidden="true"></i><span>Instagram</span></a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></a>
+                <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
+                        aria-hidden="true"></i><span>LinkedIn</span></a>
             </li>
         </ul>
     </section>
@@ -120,26 +140,24 @@
         </div>
         <div class="row about-desc" data-aos="fade-up">
             <div class="col-full">
-                <p>
-
-                </p>
+                <p></p>
             </div>
         </div>
         <div class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
-            <div class="col-block stats__col ">
+            <div class="col-block stats__col">
                 <div class="stats__count">1100</div>
                 <h5>Delegates</h5>
             </div>
             <div class="col-block stats__col">
-                <div class="stats__count">307</div>
-                <h5>Pani Puris</h5>
+                <div class="stats__count">40</div>
+                <h5>NGOs Tied Up</h5>
             </div>
             <div class="col-block stats__col">
-                <div class="stats__count">12</div>
+                <div class="stats__count">10</div>
                 <h5>Agendas Resolved</h5>
             </div>
             <div class="col-block stats__col">
-                <div class="stats__count">2000</div>
+                <div class="stats__count">3000</div>
                 <h5>Lives Impacted</h5>
             </div>
         </div>
@@ -324,7 +342,7 @@
                 <div class="testimonials">
                     <div class="testimonials__slide">
                         <p>
-                            I have been participating in various MUNs and summits since my school days,But Social conclave was something much different and diverse from all those competitions. The whole event was properly managed and hosted. And the informals were just awesome.
+                            I have been participating in various MUNs and summits since my school days, But Social conclave was something much different and diverse from all those competitions. The whole event was properly managed and hosted. And the informals were just awesome.
                             Something Unique abut the conclave was that it takes the best solutions and try to implement it. The competition is an amalgamation of various aspects such as report writing, group discussions, presentation and solution making
                             along with an actual field visit to places with which the committee is planing to deal with, which actually helps you to know the ground reality of the topic.
                         </p>
@@ -421,16 +439,20 @@
                     </div>
                     <ul class="contact-social">
                         <li>
-                            <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                            <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
+                                    aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                            <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
+                                    aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
+                                    aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
+                                    aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -438,29 +460,66 @@
         </div>
     </section>
 
+
+    <!-- Footer -->
     <footer>
         <div class="row footer-main">
-            <div class="col-six tab-full left footer-desc">
+            <div class="col-four tab-full left footer-subscribe">
+                <h4>Let's talk about</h4>
+                <p>Got an inquiry? Feel free to reach out to us! We're happy to discuss on it.</p>
+                <ul class="contact-social">
+                    <li>
+                        <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
+                                aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-three tab-full right footer-desc">
                 <div class="footer-log"></div>
-                <h4>Social Conclave</h4>
+                <h4>Links</h4>
                 <ul>
-                    <li><a class="smoothscroll" href="/">Home</a></li>
+                    <li><a class="smoothscroll" href="#home">Home</a></li>
                     <li><a class="smoothscroll" href="#about">About Us</a></li>
+                    <li><a class="smoothscroll" href="#blogs">Blogs</a></li>
                     <li><a class="smoothscroll" href="/about/agenda">Agendas</a></li>
-                    <li><a class="smoothscroll" href="#works">Glimpse</a></li>
                     <li><a class="smoothscroll" href="#clients">Affiliations</a></li>
                     <li><a class="smoothscroll" href="#contact">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="col-six tab-full right footer-subscribe">
-                <h4>Get Notified</h4>
-                <p>Quia quo qui sed odit. Quaerat voluptas autem necessitatibus vitae aut non alias sed quia. Ut itaque enim optio ut excepturi deserunt iusto porro.</p>
+            <div class="col-five tab-full right footer-subscribe">
+                <h4>Have any questions?</h4>
+                <div class="cinfo-footer">
+                    <h5>POORVA CHADHA</h5>
+                    <p>
+                        <a href="tel:+918828467640">+91-8828467640</a><br>
+                        <a href="mailto:spoorvachadha.nmims@gmail.com">spoorvachadha.nmims@gmail.com</a>
+                    </p>
+                </div>
+                <div class="cinfo-footer">
+                    <h5>SUNANDAN DASGUPTA</h5>
+                    <p>
+                        <a href="tel:+919820934218">+91-9820934218</a><br>
+                        <a href="mailto:sunandandasgupta.nmims@gmail.com">sunandandasgupta.nmims@gmail.com</a>
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="row footer-bottom">
+        <div class=" row footer-bottom">
             <div class="col-twelve">
                 <div class="go-top">
-                    <a class="smoothscroll registerTop" title="Register here for Concalve 2021" href="/ayushya">Register</a>
+                    <a class="smoothscroll registerTop" title="Register here for Concalve 2021" href="{% url 'register:register-page' %}">Register</a>
                     <a class="smoothscroll" title="Back to Top" href="#top">
                         <i class="icon-arrow-up" aria-hidden="true"></i>
                     </a>
@@ -468,6 +527,8 @@
             </div>
         </div>
     </footer>
+    <!-- /Footer -->
+
 
     <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
         <div class="pswp__bg"></div>
@@ -479,7 +540,8 @@
             </div>
             <div class="pswp__ui pswp__ui--hidden">
                 <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs
+                               " title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
                     <div class="pswp__preloader">
                         <div class="pswp__preloader__icn">
                             <div class="pswp__preloader__cut">
@@ -501,13 +563,14 @@
 
     <div id="preloader">
         <div id="loader">
-            <div class="line-scale-pulse-out">
+            <!-- <div class="line-scale-pulse-out">
                 <div></div>
                 <div></div>
                 <div></div>
                 <div></div>
                 <div></div>
-            </div>
+            </div> -->
+            <div class="scpreloader"><img src="{% static 'images/sclogo.png' %}" style="width:200px;"></div>
         </div>
     </div>
 
@@ -519,7 +582,7 @@
 
     <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js" integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js" integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin=" anonymous"></script>
     <script src="{% static 'js/earth.js' %}"></script>
     <script>
         $(window).scroll(function() {
@@ -530,7 +593,21 @@
         });
     </script>
 
+    <script>
+        function submittosheet() {
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyYc2dcIQfx8NIhAmwi3yTPrNzoyVgS-7oJxRPGyZ1tZOr5L7WRYSl-uMaBMnm-X_tc/exec';
+            const form = document.forms['submit-to-google-sheet'];
 
+            form.addEventListener('submit', e => {
+                fetch(scriptURL, {
+                        method: 'POST',
+                        body: new FormData(form)
+                    })
+                    .then(response => console.log('Success!', response))
+                    .catch(error => console.error('Error!', error.message))
+            });
+        }
+    </script>
 
 </body>
 
