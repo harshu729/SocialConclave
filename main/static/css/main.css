@@ -1549,7 +1549,6 @@ input::-moz-focus-inner {
 .header-nav__list a,
 .header-nav__list a:visited {
     color: #000;
-    text-decoration: none;
 }
 
 .header-nav__social {
@@ -2173,7 +2172,6 @@ html.no-csstransitions .home-content__main {
     padding-top: 16.2rem;
     padding-bottom: 9rem;
     background-color: #2f89fc;
-    background: url(https://wallpapercave.com/wp/wp4546350.jpg);
     color: #010507;
     position: relative;
 }
