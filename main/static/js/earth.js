@@ -27,9 +27,9 @@ var geometry = new THREE.SphereGeometry(2.15, 32, 32);
 var texture = new new THREE.TextureLoader().load('../static/images/textures/earthtexture2.3.1.jpg')
 var material = new THREE.MeshPhongMaterial({
     map: texture,
-    bumpMap: new THREE.TextureLoader('../images/textures/elev_bump_4k.jpg'),
+    bumpMap: new THREE.TextureLoader('../static/images/textures/elev_bump_4k.jpg'),
     bumpScale: 0.005,
-    specularMap: new THREE.TextureLoader('../images/textures/water_4k.png'),
+    specularMap: new THREE.TextureLoader('../static/images/textures/water_4k.png'),
     specular: new THREE.Color('grey')
 });
 var sphere = new THREE.Mesh(geometry, material);

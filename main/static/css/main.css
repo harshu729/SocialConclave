@@ -1276,6 +1276,8 @@ input::-moz-focus-inner {
 @media only screen and (max-width: 900px) {
     .section-header {
         max-width: 700px;
+        margin-bottom: 0;
+        padding-bottom: 1rem;
     }
 }
 
@@ -1819,6 +1821,8 @@ input::-moz-focus-inner {
 .home-content__buttons .btn {
     width: 215px;
     border-color: #fff;
+    padding: 0.2rem 0.75rem !important;
+    font-size: 1.5rem !important;
     color: #fff;
     margin: 1.5rem 1.5rem 0 0;
     letter-spacing: 0.25rem;
@@ -2172,6 +2176,8 @@ html.no-csstransitions .home-content__main {
     padding-top: 16.2rem;
     padding-bottom: 9rem;
     background-color: #2f89fc;
+    background: url(/static/images/bluetxt-bg.jpg);
+    background-size: cover;
     color: #010507;
     position: relative;
 }
@@ -2263,7 +2269,7 @@ html.no-csstransitions .home-content__main {
         max-width: 600px;
     }
     .stats__count {
-        font-size: 8rem;
+        font-size: 6rem;
     }
     .stats h5 {
         margin-top: 1.2rem;
@@ -2278,7 +2284,7 @@ html.no-csstransitions .home-content__main {
 
 @media only screen and (max-width: 600px) {
     .s-about {
-        padding-top: 6rem;
+        padding-top: 3rem;
         padding-bottom: 0;
     }
     .s-about .col-full p {
@@ -2323,7 +2329,7 @@ html.no-csstransitions .home-content__main {
         font-size: 1.8rem;
     }
     .stats__count {
-        font-size: 7.8rem;
+        font-size: 5.4rem;
     }
 }
 
@@ -2358,10 +2364,11 @@ html.no-csstransitions .home-content__main {
 .services-list .service-text {
     text-align: justify;
     padding: 0 25px;
+    height: 265px;
     border-radius: 25px !important;
     z-index: 100 !important;
     padding-top: 25px !important;
-    margin-top: -95px;
+    margin-top: -70px;
     background-color: #e9f2ff !important;
     position: relative;
     animation-name: animmovedown;
@@ -2418,7 +2425,7 @@ html.no-csstransitions .home-content__main {
 
 @media only screen and (max-width: 800px) {
     .services-list {
-        margin-top: 4.2rem;
+        margin-top: 0.5rem;
         max-width: 500px;
         text-align: center;
     }
@@ -2451,7 +2458,7 @@ html.no-csstransitions .home-content__main {
 
 @media only screen and (max-width: 600px) {
     .s-services {
-        padding-top: 6rem;
+        padding-top: 3rem;
         padding-bottom: 0;
     }
     .services-list .service-item:nth-child(n) {
@@ -2678,10 +2685,10 @@ html.no-csstransitions .home-content__main {
 
 @media only screen and (max-width: 600px) {
     .s-works {
-        padding-bottom: 6rem;
+        padding-bottom: 3rem;
     }
     .s-works .intro-wrap {
-        padding: 6rem 0 25.2rem;
+        padding: 3rem 0 25.2rem;
     }
     .works-content {
         margin-top: -25.2rem;
@@ -2867,8 +2874,8 @@ html.no-csstransitions .home-content__main {
 
 @media only screen and (max-width: 600px) {
     .s-clients {
-        padding-top: 6rem;
-        padding-bottom: 8rem;
+        padding-top: 3rem;
+        padding-bottom: 5rem;
     }
     .clients-testimonials::before {
         width: 250px;
@@ -2878,6 +2885,19 @@ html.no-csstransitions .home-content__main {
     }
     .clients-testimonials .testimonials p {
         font-size: 2rem;
+    }
+    .clients-outer {
+        margin-top: 0;
+        padding-bottom: 9rem;
+        padding-top: 0;
+        text-align: center;
+        position: relative;
+    }
+    .clients-testimonials {
+        margin-top: 3rem;
+        padding-top: 1rem;
+        text-align: center;
+        position: relative;
     }
 }
 
@@ -3285,8 +3305,11 @@ html.no-csstransitions .home-content__main {
 
 @media only screen and (max-width: 767px) {
     .s-contact {
-        padding-top: 6rem;
+        padding-top: 3rem;
         padding-bottom: 0;
+    }
+    textarea {
+        min-height: 18rem;
     }
     .contact__line {
         height: 14.4rem;
@@ -3314,6 +3337,7 @@ footer {
     font-family: montserrat-light, sans-serif;
     font-size: 15px;
     line-height: 2;
+    background: #111;
     text-align: center;
     color: rgba(255, 255, 255, 0.65);
 }
@@ -3553,6 +3577,10 @@ footer .row {
 @media only screen and (max-width: 800px) {
     footer .row {
         max-width: 600px;
+    }
+    .row.footer-main {
+        width: auto;
+        padding: 6rem 25px 3rem 25px;
     }
     .footer-main .left {
         padding-right: 15px;

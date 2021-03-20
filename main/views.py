@@ -1,13 +1,12 @@
 from django.shortcuts import render
-from core.models import Member
+from blogs.models import Blog
 
 # Create your views here.
 
 
 def home(request):
-    depts = [i['deptName'] for i in Member.objects.values(
-        'deptName').order_by('deptName').distinct()]
-    return render(request, 'main/index.html', {'depts': depts})
+    allblogs = Blog.objects.all()
+    return render(request, 'main/index.html', {'allblogs': allblogs})
 
 
 def ayushya(request):

@@ -36,3 +36,7 @@ class Delegate(models.Model):
     yearGrad = models.IntegerField(validators=[validators.MinValueValidator(
         999), validators.MaxValueValidator(10000)], blank=True)
     city = models.CharField(max_length=1000, blank=True)
+    team = models.CharField(max_length=1000,blank=True)
+    registeredBy = models.CharField(max_length=1000,blank=True)
+    def __str__(self):
+        return self.name+' from '+self.schoolName

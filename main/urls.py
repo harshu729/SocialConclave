@@ -6,5 +6,4 @@ app_name = 'main'
 
 urlpatterns = [
     path('', views.home, name='landing-page'),
-    path('ayushya/', views.ayushya, name='ayushya'),
 ]

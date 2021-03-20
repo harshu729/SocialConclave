@@ -20,6 +20,10 @@ app_name = "core"
 #     blogs = Blog.objects.filter(slug__icontains=blog).first()
 #     return render(request, 'blogs/blog.html', {'blog': blogs})
 
+def allblog(request):
+    allblogs = Blog.objects.all()
+    return render(request, 'blogs/allblogs.html', {'allblogs': allblogs})
+
 
 def eachblog(request, blogslug):
     return render(request, f'blogs/{blogslug}.html')

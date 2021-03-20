@@ -25,7 +25,6 @@
     <script src="{% static 'js/modernizr.js' %}"></script>
     <script src="{% static 'js/pace.min.js' %}"></script>
 
-
     <link rel="stylesheet" href="{% static 'css/register-style.css' %}">
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -34,10 +33,18 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
     <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+    
+    <style>
+        .header-nav__list a, .header-nav__list a:visited {
+            color: #000;
+            text-decoration: none;
+        }
+    </style>
 
 </head>
 
 <body>
+    
     <!-- Header -->
     <header class="s-header">
         <div class="header-logo">
@@ -53,12 +60,12 @@
         <nav id="bigone" class="header-nav1">
             <div class="header-nav__content1">
                 <ul class="header-nav__list">
-                    <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
-                    <li><a class="smoothscroll" href="#about" title="about">About Us</a></li>
-                    <li><a class="smoothscroll" href="#services" title="blogs">Blogs</a></li>
-                    <li><a class="smoothscroll" href="#works" title="works">Glimpse</a></li>
-                    <li><a class="smoothscroll" href="#clients" title="clients">Affiliations</a></li>
-                    <li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
+                    <li><a href="{% url 'main:landing-page' %}" title="home">Home</a></li>
+                    <li><a href="https://www.socialconclave.com/#about" title="about">About Us</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}" title="blogs">Blogs</a></li>
+                    <li class="current"><a href="{% url 'core:overTheYears' %}" title="our team">Our Team</a></li>
+                    <li><a href="https://www.socialconclave.com/#contact" title="contact">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
@@ -76,12 +83,12 @@
     <!-- Mobile Menu -->
     <div id="myNav" class="ov">
         <div class="ov-content">
-            <a class="smoothscroll" href="#home" title="home" onclick="myFunction();">Home</a>
-            <a class="smoothscroll" href="#about" title="about" onclick="myFunction();">About Us</a>
-            <a class="smoothscroll" href="#blog" title="blogs" onclick="myFunction();">Blog</a>
-            <a class="smoothscroll" href="#works" title="works" onclick="myFunction();">Glimpse</a>
-            <a class="smoothscroll" href="#clients" title="clients" onclick="myFunction();">Affiliations</a>
-            <a class="smoothscroll" href="#contact" title="contact" onclick="myFunction();">Contact</a>
+            <a href="{% url 'main:landing-page' %}" title="home" onclick="myFunction();">Home</a>
+            <a href="https://www.socialconclave.com/#about" title="about" onclick="myFunction();">About Us</a>
+            <a href="{% url 'core:agendas' %}" title="agendas" onclick="myFunction();">Agendas</a>
+            <a href="{% url 'blogs:allblog' %}" title="blogs" onclick="myFunction();">Blog</a>
+            <a href="{% url 'core:overTheYears' %}" title="our team" onclick="myFunction();">Our Team</a>
+            <a href="https://www.socialconclave.com/#contact" title="contact" onclick="myFunction();">Contact</a>
         </div>
     </div>
     <!-- /Mobile Menu -->
@@ -107,7 +114,7 @@
     </div>
     <!-- /FORM -->
 
-    <!-- Footer -->
+     <!-- Footer -->
     <footer>
         <div class="row footer-main">
             <div class="col-four tab-full left footer-subscribe">
@@ -136,12 +143,11 @@
                 <div class="footer-log"></div>
                 <h4>Links</h4>
                 <ul>
-                    <li><a class="smoothscroll" href="#home">Home</a></li>
-                    <li><a class="smoothscroll" href="#about">About Us</a></li>
-                    <li><a class="smoothscroll" href="#blogs">Blogs</a></li>
-                    <li><a class="smoothscroll" href="/about/agenda">Agendas</a></li>
-                    <li><a class="smoothscroll" href="#clients">Affiliations</a></li>
-                    <li><a class="smoothscroll" href="#contact">Contact Us</a></li>
+                    <li><a class="smoothscroll" href="https://www.socialconclave.com/">Home</a></li>
+                    <li><a href="{% url 'core:overTheYears' %}">Our Team</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}">Blogs</a></li>
+                    <li><a href="https://www.socialconclave.com/#contact">Contact Us</a></li>
                 </ul>
             </div>
             <div class="col-five tab-full right footer-subscribe">
@@ -150,7 +156,7 @@
                     <h5>POORVA CHADHA</h5>
                     <p>
                         <a href="tel:+918828467640">+91-8828467640</a><br>
-                        <a href="mailto:spoorvachadha.nmims@gmail.com">spoorvachadha.nmims@gmail.com</a>
+                        <a href="mailto:spoorvachadha.nmims@gmail.com">poorvachadha.nmims@gmail.com</a>
                     </p>
                 </div>
                 <div class="cinfo-footer">
@@ -175,6 +181,7 @@
     <!-- /Footer -->
 
 
+    <!--Preloader-->
     <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
         <div class="pswp__bg"></div>
         <div class="pswp__scroll-wrap">
@@ -208,22 +215,20 @@
 
     <div id="preloader">
         <div id="loader">
-            <!-- <div class="line-scale-pulse-out">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div> -->
             <div class="scpreloader"><img src="{% static 'images/sclogo.png' %}" style="width:200px;"></div>
         </div>
     </div>
+    <!--Preloader-->
 
-    <script data-cfasync="false" src="{% static 'js/cloudflare-static-email-decode.min.js' %}"></script>
     <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
     <script src="{% static 'js/9959-js-plugins.js' %}"></script>
     <script src="{% static 'js/320-js-main.js' %}"></script>
     <script src="{% static 'js/nav.js' %}"></script>
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js" integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin=" anonymous"></script>
+    <script src="{% static 'js/earth.js' %}"></script>
 
 
     <script>

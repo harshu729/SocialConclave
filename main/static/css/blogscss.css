@@ -1,6 +1,4 @@
-p{
-    font-size:200%;
-}
+
 .logo{
     max-width:75%;
     margin-left:-15px;
@@ -12,9 +10,21 @@ p{
     width:100%;
     min-height:250px;
 }
-.row{
-    margin:0 auto !important;
+p {
+  font-size: 2rem;
 }
+.row{
+    margin: 80px auto !important;
+}
+
+
+b {
+  font-family: "Segoe UI Light", "Segoe", "Segoe UI", "Helvetica Neue",
+    sans-serif;
+  font-weight: 900;
+}
+
+
 .col-md-1{
     padding-top:2%;
 }

@@ -15,11 +15,12 @@ from pathlib import Path
 import django_heroku
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'dummytrial2021@gmail.com'
-EMAIL_HOST_PASSWORD = 'Sattva2021'
+EMAIL_HOST = 'mail.socialconclave.com'
+EMAIL_USE_SSL = True
+# EMAIL_USE_TLS = True
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'admin@socialconclave.com'
+EMAIL_HOST_PASSWORD = 'SCAdmin@123#'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -36,7 +37,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'socialconclave.herokuapp.com',
-    '127.0.0.1'
+    '127.0.0.1',
+    '*'
 ]
 
 

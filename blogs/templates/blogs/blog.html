@@ -10,29 +10,25 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
-    <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
-
-    <link rel="preload" href="{% static 'images/sclogo.png' %}" as="image">
-    <link rel="preload" href="{% static 'images/earthRing.png' %}" as="image">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/blogscss.css' %}">
+
     <script src="{% static 'js/modernizr.js' %}"></script>
     <script src="{% static 'js/pace.min.js' %}"></script>
+
 
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
     <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
-
-
 </head>
 
 <body id="top">
@@ -51,12 +47,12 @@
         <nav id="bigone" class="header-nav1">
             <div class="header-nav__content1">
                 <ul class="header-nav__list">
-                    <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
-                    <li><a class="smoothscroll" href="#about" title="about">About Us</a></li>
-                    <li><a class="smoothscroll" href="#services" title="blogs">Blogs</a></li>
-                    <li><a class="smoothscroll" href="#works" title="works">Glimpse</a></li>
-                    <li><a class="smoothscroll" href="#clients" title="clients">Affiliations</a></li>
-                    <li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
+                    <li><a href="{% url 'main:landing-page' %}" title="home">Home</a></li>
+                    <li><a href="https://www.socialconclave.com/#about" title="about">About Us</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}" title="blogs">Blogs</a></li>
+                    <li><a href="{% url 'core:overTheYears' %}" title="our team">Our Team</a></li>
+                    <li><a href="https://www.socialconclave.com/#contact" title="contact">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
@@ -74,18 +70,21 @@
     <!-- Mobile Menu -->
     <div id="myNav" class="ov">
         <div class="ov-content">
-            <a class="smoothscroll" href="#home" title="home" onclick="myFunction();">Home</a>
-            <a class="smoothscroll" href="#about" title="about" onclick="myFunction();">About Us</a>
-            <a class="smoothscroll" href="#blog" title="blogs" onclick="myFunction();">Blog</a>
-            <a class="smoothscroll" href="#works" title="works" onclick="myFunction();">Glimpse</a>
-            <a class="smoothscroll" href="#clients" title="clients" onclick="myFunction();">Affiliations</a>
-            <a class="smoothscroll" href="#contact" title="contact" onclick="myFunction();">Contact</a>
+            <a href="{% url 'main:landing-page' %}" title="home" onclick="myFunction();">Home</a>
+            <a href="https://www.socialconclave.com/#about" title="about" onclick="myFunction();">About Us</a>
+            <a href="{% url 'core:agendas' %}" title="agendas" onclick="myFunction();">Agendas</a>
+            <a href="{% url 'blogs:allblog' %}" title="blogs" onclick="myFunction();">Blog</a>
+            <a href="{% url 'core:overTheYears' %}" title="our team" onclick="myFunction();">Our Team</a>
+            <a href="https://www.socialconclave.com/#contact" title="contact" onclick="myFunction();">Contact</a>
         </div>
     </div>
     <!-- /Mobile Menu -->
 
 
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000" data-position-y="center">
+
+    <section id="home" class="s-home target-section" data-parallax="scroll"
+        data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000"
+        data-position-y="center">
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
         <div class="home-content">
@@ -131,7 +130,6 @@
                             aria-hidden="true"></i><span>LinkedIn</span></a>
                 </li>
             </ul>
-        </div>
     </section>
     <div class="container-fluid">
         <div class="row">
@@ -143,13 +141,22 @@
             <div class="col-md-11">
                 <h1 class="blogheading">How a veteran entrepreneur is helping Microsoft double down on startups</h1><br>
                 <div class="div1">
-                    <p class="div1para">No one would have thought Jeff Ma would land where he did, least of all Ma himself.
-                        <br><br> For decades, Ma has been known in Silicon Valley as an entrepreneur who launched and sold several successful and diverse companies. More famously, he was a member of the MIT blackjack team that won millions from Las Vegas
-                        casinos and the inspiration for the main character in the movie “21” and the book “Bringing Down the House.” Ma has been an options trader, was a water polo coach for years, is an author and professional speaker, and has been a
+                    <p class="div1para">No one would have thought Jeff Ma would land where he did, least of all Ma
+                        himself.
+                        <br><br> For decades, Ma has been known in Silicon Valley as an entrepreneur who launched and
+                        sold several successful and diverse companies. More famously, he was a member of the MIT
+                        blackjack team that won millions from Las Vegas
+                        casinos and the inspiration for the main character in the movie “21” and the book “Bringing Down
+                        the House.” Ma has been an options trader, was a water polo coach for years, is an author and
+                        professional speaker, and has been a
                         writer and on-air personality for ESPN.
-                        <br><br> He is, in other words, someone who defies easy pigeonholing. And when Ma took on a new role in the spring, the move raised eyebrows across Silicon Valley’s startup community. The seasoned entrepreneur with the colorful
+                        <br><br> He is, in other words, someone who defies easy pigeonholing. And when Ma took on a new
+                        role in the spring, the move raised eyebrows across Silicon Valley’s startup community. The
+                        seasoned entrepreneur with the colorful
                         and unpredictable career was going to … one of the world’s tech giants?
-                        <br><br> “The fact that he went to Microsoft is a big deal,” said Kevin Compton, former operating partner at Kleiner Perkins and now co-founder of Radar Partners, a venture capital firm based in Palo Alto. “People were surprised.
+                        <br><br> “The fact that he went to Microsoft is a big deal,” said Kevin Compton, former
+                        operating partner at Kleiner Perkins and now co-founder of Radar Partners, a venture capital
+                        firm based in Palo Alto. “People were surprised.
                         He could have gone anywhere, and he went there.”
                         <br><br>
                     </p>
@@ -157,27 +164,44 @@
                 </div>
                 <div class="div2">
                     <p id="div2para">No one would have thought Jeff Ma would land where he did, least of all Ma himself.
-                        <br><br> For decades, Ma has been known in Silicon Valley as an entrepreneur who launched and sold several successful and diverse companies. More famously, he was a member of the MIT blackjack team that won millions from Las Vegas
-                        casinos and the inspiration for the main character in the movie “21” and the book “Bringing Down the House.” Ma has been an options trader, was a water polo coach for years, is an author and professional speaker, and has been a
+                        <br><br> For decades, Ma has been known in Silicon Valley as an entrepreneur who launched and
+                        sold several successful and diverse companies. More famously, he was a member of the MIT
+                        blackjack team that won millions from Las Vegas
+                        casinos and the inspiration for the main character in the movie “21” and the book “Bringing Down
+                        the House.” Ma has been an options trader, was a water polo coach for years, is an author and
+                        professional speaker, and has been a
                         writer and on-air personality for ESPN.
-                        <br><br> He is, in other words, someone who defies easy pigeonholing. And when Ma took on a new role in the spring, the move raised eyebrows across Silicon Valley’s startup community. The seasoned entrepreneur with the colorful
+                        <br><br> He is, in other words, someone who defies easy pigeonholing. And when Ma took on a new
+                        role in the spring, the move raised eyebrows across Silicon Valley’s startup community. The
+                        seasoned entrepreneur with the colorful
                         and unpredictable career was going to … one of the world’s tech giants?
-                        <br><br> “The fact that he went to Microsoft is a big deal,” said Kevin Compton, former operating partner at Kleiner Perkins and now co-founder of Radar Partners, a venture capital firm based in Palo Alto. “People were surprised.
+                        <br><br> “The fact that he went to Microsoft is a big deal,” said Kevin Compton, former
+                        operating partner at Kleiner Perkins and now co-founder of Radar Partners, a venture capital
+                        firm based in Palo Alto. “People were surprised.
                         He could have gone anywhere, and he went there.”
                         <br><br>
                     </p>
                 </div>
                 <div class="div3">
-                    <h1 class="div3quote">" Six months into the job, Jeff Ma is proactively seeking out targeted startups and strengthening Microsoft’s presence in Silicon Valley. "</h1><br><br>
+                    <h1 class="div3quote">" Six months into the job, Jeff Ma is proactively seeking out targeted
+                        startups and strengthening Microsoft’s presence in Silicon Valley. "</h1><br><br>
                 </div>
                 <div class="div2">
                     <p id="div2para">No one would have thought Jeff Ma would land where he did, least of all Ma himself.
-                        <br><br> For decades, Ma has been known in Silicon Valley as an entrepreneur who launched and sold several successful and diverse companies. More famously, he was a member of the MIT blackjack team that won millions from Las Vegas
-                        casinos and the inspiration for the main character in the movie “21” and the book “Bringing Down the House.” Ma has been an options trader, was a water polo coach for years, is an author and professional speaker, and has been a
+                        <br><br> For decades, Ma has been known in Silicon Valley as an entrepreneur who launched and
+                        sold several successful and diverse companies. More famously, he was a member of the MIT
+                        blackjack team that won millions from Las Vegas
+                        casinos and the inspiration for the main character in the movie “21” and the book “Bringing Down
+                        the House.” Ma has been an options trader, was a water polo coach for years, is an author and
+                        professional speaker, and has been a
                         writer and on-air personality for ESPN.
-                        <br><br> He is, in other words, someone who defies easy pigeonholing. And when Ma took on a new role in the spring, the move raised eyebrows across Silicon Valley’s startup community. The seasoned entrepreneur with the colorful
+                        <br><br> He is, in other words, someone who defies easy pigeonholing. And when Ma took on a new
+                        role in the spring, the move raised eyebrows across Silicon Valley’s startup community. The
+                        seasoned entrepreneur with the colorful
                         and unpredictable career was going to … one of the world’s tech giants?
-                        <br><br> “The fact that he went to Microsoft is a big deal,” said Kevin Compton, former operating partner at Kleiner Perkins and now co-founder of Radar Partners, a venture capital firm based in Palo Alto. “People were surprised.
+                        <br><br> “The fact that he went to Microsoft is a big deal,” said Kevin Compton, former
+                        operating partner at Kleiner Perkins and now co-founder of Radar Partners, a venture capital
+                        firm based in Palo Alto. “People were surprised.
                         He could have gone anywhere, and he went there.”
                         <br><br>
                     </p>
@@ -188,12 +212,21 @@
                             <img class="div4leftimg" src="{% static 'images/portfolio/guitarist.jpg' %}">
                         </div>
                         <div class="col-md-6">
-                            <p class="div4rightpara">No one would have thought Jeff Ma would land where he did, least of all Ma himself.<br><br> For decades, Ma has been known in Silicon Valley as an entrepreneur who launched and sold several successful and diverse companies.
-                                More famously, he was a member of the MIT blackjack team that won millions from Las Vegas casinos and the inspiration for the main character in the movie “21” and the book “Bringing Down the House.” Ma has been an options
-                                trader, was a water polo coach for years, is an author and professional speaker, and has been a writer and on-air personality for ESPN.
-                                <br><br> He is, in other words, someone who defies easy pigeonholing. And when Ma took on a new role in the spring, the move raised eyebrows across Silicon Valley’s startup community. The seasoned entrepreneur with the
+                            <p class="div4rightpara">No one would have thought Jeff Ma would land where he did, least of
+                                all Ma himself.<br><br> For decades, Ma has been known in Silicon Valley as an
+                                entrepreneur who launched and sold several successful and diverse companies.
+                                More famously, he was a member of the MIT blackjack team that won millions from Las
+                                Vegas casinos and the inspiration for the main character in the movie “21” and the book
+                                “Bringing Down the House.” Ma has been an options
+                                trader, was a water polo coach for years, is an author and professional speaker, and has
+                                been a writer and on-air personality for ESPN.
+                                <br><br> He is, in other words, someone who defies easy pigeonholing. And when Ma took
+                                on a new role in the spring, the move raised eyebrows across Silicon Valley’s startup
+                                community. The seasoned entrepreneur with the
                                 colorful and unpredictable career was going to … one of the world’s tech giants?
-                                <br><br> “The fact that he went to Microsoft is a big deal,” said Kevin Compton, former operating partner at Kleiner Perkins and now co-founder of Radar Partners, a venture capital firm based in Palo Alto. “People were
+                                <br><br> “The fact that he went to Microsoft is a big deal,” said Kevin Compton, former
+                                operating partner at Kleiner Perkins and now co-founder of Radar Partners, a venture
+                                capital firm based in Palo Alto. “People were
                                 surprised. He could have gone anywhere, and he went there.”
                                 <br><br>
                             </p>
@@ -202,6 +235,10 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="go-top">
+        <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
     </div>
 
     <!-- Footer -->
@@ -233,12 +270,11 @@
                 <div class="footer-log"></div>
                 <h4>Links</h4>
                 <ul>
-                    <li><a class="smoothscroll" href="#home">Home</a></li>
-                    <li><a class="smoothscroll" href="#about">About Us</a></li>
-                    <li><a class="smoothscroll" href="#blogs">Blogs</a></li>
-                    <li><a class="smoothscroll" href="/about/agenda">Agendas</a></li>
-                    <li><a class="smoothscroll" href="#clients">Affiliations</a></li>
-                    <li><a class="smoothscroll" href="#contact">Contact Us</a></li>
+                    <li><a class="smoothscroll" href="https://www.socialconclave.com/">Home</a></li>
+                    <li><a href="{% url 'core:overTheYears' %}">Our Team</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}">Blogs</a></li>
+                    <li><a href="https://www.socialconclave.com/#contact">Contact Us</a></li>
                 </ul>
             </div>
             <div class="col-five tab-full right footer-subscribe">
@@ -247,7 +283,7 @@
                     <h5>POORVA CHADHA</h5>
                     <p>
                         <a href="tel:+918828467640">+91-8828467640</a><br>
-                        <a href="mailto:spoorvachadha.nmims@gmail.com">spoorvachadha.nmims@gmail.com</a>
+                        <a href="mailto:spoorvachadha.nmims@gmail.com">poorvachadha.nmims@gmail.com</a>
                     </p>
                 </div>
                 <div class="cinfo-footer">
@@ -262,7 +298,7 @@
         <div class=" row footer-bottom">
             <div class="col-twelve">
                 <div class="go-top">
-                    <a class="smoothscroll registerTop" title="Register here for Concalve 2021" href="/ayushya">Register</a>
+                    <a class="smoothscroll registerTop" title="Register here for Concalve 2021" href="{% url 'register:register-page' %}">Register</a>
                     <a class="smoothscroll" title="Back to Top" href="#top">
                         <i class="icon-arrow-up" aria-hidden="true"></i>
                     </a>
@@ -273,6 +309,7 @@
     <!-- /Footer -->
 
 
+    <!--Preloader-->
     <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
         <div class="pswp__bg"></div>
         <div class="pswp__scroll-wrap">
@@ -306,26 +343,24 @@
 
     <div id="preloader">
         <div id="loader">
-            <!-- <div class="line-scale-pulse-out">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div> -->
             <div class="scpreloader"><img src="{% static 'images/sclogo.png' %}" style="width:200px;"></div>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script data-cfasync="false" src="{% static 'js/cloudflare-static-email-decode.min.js' %}"></script>
+    <!--Preloader-->
+    
     <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{% static 'js/9959-js-plugins.js' %}"></script>
     <script src="{% static 'js/320-js-main.js' %}"></script>
     <script src="{% static 'js/nav.js' %}"></script>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js" integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin=" anonymous"></script>
+    <script src="{% static 'js/earth.js' %}"></script> 
+    
     <script>
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             var sTop = $(this).scrollTop();
             if (sTop >= 1500) {
                 $(".service-text").addClass("animmovedown");

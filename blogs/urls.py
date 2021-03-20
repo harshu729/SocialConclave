@@ -5,5 +5,6 @@ from . import views
 app_name = "blogs"
 
 urlpatterns = [
+    path('', views.allblog, name="allblog"),
     path('<str:blogslug>/', views.eachblog, name="eachblog"),
 ]

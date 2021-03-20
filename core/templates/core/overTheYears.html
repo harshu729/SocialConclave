@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Social Conclave | More About Us</title>
+    <title>Our Team |Social Conclave</title>
     <meta name="description" content="" />
     <meta name="author" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,10 +22,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
     <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
-
 </head>
 
-<body id="top" class="overTheYears">
+<body class="overTheYears" id="top">
 
     <!-- Header -->
     <header class="s-header">
@@ -42,12 +41,12 @@
         <nav id="bigone" class="header-nav1">
             <div class="header-nav__content1">
                 <ul class="header-nav__list">
-                    <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
-                    <li><a class="smoothscroll" href="#about" title="about">About Us</a></li>
-                    <li><a class="smoothscroll" href="#services" title="blogs">Blogs</a></li>
-                    <li><a class="smoothscroll" href="#works" title="works">Glimpse</a></li>
-                    <li><a class="smoothscroll" href="#clients" title="clients">Affiliations</a></li>
-                    <li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
+                    <li><a href="{% url 'main:landing-page' %}" title="home">Home</a></li>
+                    <li><a href="https://www.socialconclave.com/#about" title="about">About Us</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}" title="blogs">Blogs</a></li>
+                    <li class="current"><a class="smoothscroll" href="#superCoreTeam" title="our team">Our Team</a></li>
+                    <li><a href="https://www.socialconclave.com/#contact" title="contact">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
@@ -65,12 +64,12 @@
     <!-- Mobile Menu -->
     <div id="myNav" class="ov">
         <div class="ov-content">
-            <a class="smoothscroll" href="#home" title="home" onclick="myFunction();">Home</a>
-            <a class="smoothscroll" href="#about" title="about" onclick="myFunction();">About Us</a>
-            <a class="smoothscroll" href="#blog" title="blogs" onclick="myFunction();">Blog</a>
-            <a class="smoothscroll" href="#works" title="works" onclick="myFunction();">Glimpse</a>
-            <a class="smoothscroll" href="#clients" title="clients" onclick="myFunction();">Affiliations</a>
-            <a class="smoothscroll" href="#contact" title="contact" onclick="myFunction();">Contact</a>
+            <a href="{% url 'main:landing-page' %}" title="home" onclick="myFunction();">Home</a>
+            <a href="https://www.socialconclave.com/#about" title="about" onclick="myFunction();">About Us</a>
+            <a href="{% url 'core:agendas' %}" title="agendas" onclick="myFunction();">Agendas</a>
+            <a href="{% url 'blogs:allblog' %}" title="blogs" onclick="myFunction();">Blog</a>
+            <a class="smoothscroll" href="{% url 'core:overTheYears' %}" title="our team" onclick="myFunction();">Our Team</a>
+            <a class="smoothscroll" href="https://www.socialconclave.com/#contact" title="contact" onclick="myFunction();">Contact</a>
         </div>
     </div>
     <!-- /Mobile Menu -->
@@ -86,12 +85,12 @@
                 </h1>
                 <h1 style="margin-top: 0px">ONE PROBLEM AT A TIME.<br></h1>
                 <div class="home-content__buttons">
-                    <a href="/register" class="btn btn--stroke">Register</a>
+                    <a href="{% url 'register:register-page' %}" class="btn btn--stroke">Register</a>
                     <a href="{% url 'main:landing-page' %}" class="btn btn--stroke">Home</a>
                 </div>
             </div>
             <div class="home-content__scroll">
-                <a href="#services" class="scroll-link smoothscroll">
+                <a href="#superCoreTeam" class="scroll-link smoothscroll">
                     <span>Scroll Down</span>
                 </a>
             </div>
@@ -113,11 +112,11 @@
         </ul>
     </section>
 
-    <section id="services" class="s-services">
+    <section id="superCoreTeam" class="s-services">
         <div class="provide" id="teamsId">
             <div class="header">
                 <span>Our Team</span>
-                <h2>Super Core Conclave 2020</h2>
+                <h2>Super Core Conclave 2021</h2>
                 <p>
                     We at Conclave believe in doing our bit to bring about a big change one problem at a time
                 </p>
@@ -127,7 +126,7 @@
                     <div class="sc-block">
                         <div class="sc-block-image">
                             <div class="block-image">
-                                <img src="{% static 'images/team/supercore/Rohit.webp' %}">
+                                <img style="height: 400px;" src="{% static 'images/team/supercore/Rishabh.webp' %}">
                             </div>
                         </div>
                         <div class="sc-block-dscp">
@@ -156,9 +155,10 @@
                         </div>
                     </div>
                     <div class="sc-block">
+                        
                         <div class="sc-block-image">
                             <div class="block-image">
-                                <img src="{% static 'images/team/supercore/Rohit.webp' %}">
+                                <img style="height: 400px;" src="{% static 'images/team/supercore/Arushi.webp' %}">
                             </div>
                         </div>
                         <div class="sc-block-dscp">
@@ -189,7 +189,7 @@
                     <div class="sc-block">
                         <div class="sc-block-image">
                             <div class="block-image">
-                                <img src="{% static 'images/team/supercore/Rohit.webp' %}">
+                                <img style="height: 400px;" src="{% static 'images/team/supercore/Shetty.webp' %}">
                             </div>
                         </div>
                         <div class="sc-block-dscp">
@@ -210,17 +210,17 @@
                                     </p>
                                     <p>
                                         Ishaan is one of the most hardworking and diligent people you'd ever come across. Funny, gritty and smart, he's all these qualities blended in one person. He has exceptionally sharp intellect and knows how to utilize it flawlessly. His leadership skills
-                                        are exemplary and he believes in never giving up. He believes that success comes to those who strive for it, work towards it. But more than anything else, he's extremely solicitous and an amazing human being! Team
-                                        Conclave cannot be any more happier to have him as our VP this year.
+                                        are exemplary and he believes in never giving up. He believes that success comes to those who strive for it, work towards it. But more than anything else, he's extremely solicitous and an amazing human being! Team Conclave cannot be any more happier to have him as our VP this year.
                                     </p>
                                 </h3>
                             </div>
                         </div>
                     </div>
                     <div class="sc-block">
+                        
                         <div class="sc-block-image">
                             <div class="block-image">
-                                <img src="{% static 'images/team/supercore/Rohit.webp' %}">
+                                <img src="{% static 'images/team/supercore/Vidhi.webp' %}">
                             </div>
                         </div>
                         <div class="sc-block-dscp">
@@ -240,13 +240,12 @@
                                         “A strong woman puts a challenge in the eye and gives it a win”- Gina Carrey
                                     </p>
                                     <p>
-                                        Glamorizing Social Conclave is Vidhi’s job and she nails it excellently. She is here to prettify this year’s conference just like she prettifies everything around her. Her elegant and lively nature has the infectious energy to make everyone around her
-                                        consistently pump up and become joyous. She is a perfectionist and takes up all the challenges sportingly. She is loaded with unrivaled abilities and blessed with a blend of characteristics like confidence, boldness
-                                        and integrity. Showing utmost magnificence, she displays sheer hard work and we’re glad to have her as our Vice-President this year.
+                                        Glamorizing Social Conclave is Vidhi’s job and she nails it excellently. She is here to prettify this year’s conference just like she prettifies everything around her. Her elegant and lively nature has the infectious energy to make everyone around her consistently pump up and become joyous. She is a perfectionist and takes up all the challenges sportingly. She is loaded with unrivaled abilities and blessed with a blend of characteristics like confidence, boldness and integrity. Showing utmost magnificence, she displays sheer hard work and we’re glad to have her as our Vice-President this year.
                                     </p>
                                 </h3>
                             </div>
                         </div>
+
                     </div>
                     <div class="sc-block">
                         <div class="sc-block-image">
@@ -280,12 +279,13 @@
                         </div>
                     </div>
                     <div class="sc-block">
+                        
                         <div class="sc-block-image">
                             <div class="block-image">
-                                <img src="{% static 'images/team/supercore/Rohit.webp' %}">
+                                <img src="{% static 'images/team/supercore/Rayushi.webp' %}">
                             </div>
-                        </div>
-                        <div class="sc-block-dscp">
+                        </div>  
+                        <div class="sc-block-dscp" >
                             <div class="post">
                                 <h1>
                                     Vice Chairperson:
@@ -314,7 +314,7 @@
                     <div class="sc-block">
                         <div class="sc-block-image">
                             <div class="block-image">
-                                <img src="{% static 'images/team/supercore/Rohit.webp' %}">
+                                <img style="height: 400px;" src="{% static 'images/team/supercore/Harsh.webp' %}">
                             </div>
                         </div>
                         <div class="sc-block-dscp">
@@ -334,9 +334,7 @@
                                         “Preparedness and punctuality are the two most important qualities of a leader.” John Andreas Widtsoe
                                     </p>
                                     <p>
-                                        Harsh’s brilliance in organizing everything and his utmost punctuality in getting any work done, and done with perfection, makes him a person to look out for, in Conclave or anywhere he leads. He has a surreal zeal in helping everyone around him and knows
-                                        the ins and outs on any occasion, thanks to his empirical experience in Logistics throughout the years. His sheer excellence and integrity is inspiring to one and all. As an honourable Vice Chairperson of Social
-                                        Conclave 2021, we can only imagine him taking the conference to a transcendent level of success.
+                                        Harsh’s brilliance in organizing everything and his utmost punctuality in getting any work done, and done with perfection, makes him a person to look out for, in Conclave or anywhere he leads. He has a surreal zeal in helping everyone around him and knows the ins and outs on any occasion, thanks to his empirical experience in Logistics throughout the years. His sheer excellence and integrity is inspiring to one and all. As an honourable Vice Chairperson of Social Conclave 2021, we can only imagine him taking the conference to a transcendent level of success.
                                     </p>
                                 </h3>
                             </div>
@@ -348,11 +346,11 @@
         </div>
     </section>
 
-    <section id="services" class="s-services">
+    <section id="coreTeam" class="s-services">
         <div class="provide" id="teamsId">
             <div class="header">
                 <span>Over Team</span>
-                <h2>Core Conclave 2020</h2>
+                <h2>Core Conclave 2021</h2>
                 <p>
                     We at Conclave believe in doing our bit to bring about a big change one problem at a time
                 </p>
@@ -375,8 +373,10 @@
                         <img src="{% static 'images/departments/Skills_-_12.png' %}" alt="" />
                     </div>
                     <div class="content">
+                        <span>Head</span>
+                        <h3>Aum Kadam</h3>
                         <span>Sub Head</span>
-                        <h3>Adarsh Shrinivas</h3>
+                        <h3>Adarsh<br>Shrinivas</h3>
                     </div>
                 </div>
                 <div class="card" onclick="CardClick(this)">
@@ -387,7 +387,7 @@
                         <span>Head</span>
                         <h3>Garima Merani<br>Devika Suryawanshi </h3>
                         <span>Sub Head</span>
-                        <h3>Dev Mazumdar<br>Madhavi<br>>Sehaj</h3>
+                        <h3>Dev<br>Madhavi<br>Sehaj</h3>
                     </div>
                 </div>
                 <div class="card" onclick="CardClick(this)">
@@ -398,7 +398,7 @@
                         <span>Head</span>
                         <h3>Avani Laddha<br>Gaurav Malviya</h3>
                         <span>Sub Head</span>
-                        <h3>Bharati<br>Manasi Murarkar<br>Megh</h3>
+                        <h3>Bharati<br>Manasi<br>Megh</h3>
                     </div>
                 </div>
                 <div class="card" onclick="CardClick(this)">
@@ -431,7 +431,7 @@
                         <span>Head</span>
                         <h3>Shubh Mehta</h3>
                         <span>Sub Head</span>
-                        <h3>Vidi<br>Jai<br>Hetvi Hirani</h3>
+                        <h3>Vidi<br>Jai<br>Hetvi</h3>
                     </div>
                 </div>
                 <div class="card" onclick="CardClick(this)">
@@ -453,7 +453,7 @@
                         <span>Head</span>
                         <h3>Poorva Chadha</h3>
                         <span>Sub Head</span>
-                        <h3>Archisha<br>Dhruv<br>Rajveer<br>Sunandan</h3>
+                        <h3>Archisha<br>Dhruv<br>Sunandan</h3>
                     </div>
                 </div>
                 <div class="card" onclick="CardClick(this)">
@@ -464,7 +464,7 @@
                         <span>Head</span>
                         <h3>Siddharth Nair</h3>
                         <span>Sub Head</span>
-                        <h3>Jash Patel<br>Akshat<br>Anish</h3>
+                        <h3>Jash<br>Akshat<br>Anish</h3>
                     </div>
                 </div>
                 <div class="card" onclick="CardClick(this)">
@@ -475,7 +475,7 @@
                         <span>Head</span>
                         <h3>Aarushi Tiwari</h3>
                         <span>Sub Head</span>
-                        <h3>Hetvi Thakkar<br>Tvisha<br>Enakshi<br>Saumya Joshi</h3>
+                        <h3>Hetvi<br>Tvisha<br>Enakshi<br>Saumya</h3>
                     </div>
                 </div>
                 <div class="card" onclick="CardClick(this)">
@@ -520,12 +520,11 @@
                 <div class="footer-log"></div>
                 <h4>Links</h4>
                 <ul>
-                    <li><a class="smoothscroll" href="#home">Home</a></li>
-                    <li><a class="smoothscroll" href="#about">About Us</a></li>
-                    <li><a class="smoothscroll" href="#blogs">Blogs</a></li>
-                    <li><a class="smoothscroll" href="/about/agenda">Agendas</a></li>
-                    <li><a class="smoothscroll" href="#clients">Affiliations</a></li>
-                    <li><a class="smoothscroll" href="#contact">Contact Us</a></li>
+                    <li><a class="smoothscroll" href="https://www.socialconclave.com/">Home</a></li>
+                    <li><a href="{% url 'core:overTheYears' %}">Our Team</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}">Blogs</a></li>
+                    <li><a href="https://www.socialconclave.com/#contact">Contact Us</a></li>
                 </ul>
             </div>
             <div class="col-five tab-full right footer-subscribe">
@@ -534,7 +533,7 @@
                     <h5>POORVA CHADHA</h5>
                     <p>
                         <a href="tel:+918828467640">+91-8828467640</a><br>
-                        <a href="mailto:spoorvachadha.nmims@gmail.com">spoorvachadha.nmims@gmail.com</a>
+                        <a href="mailto:spoorvachadha.nmims@gmail.com">poorvachadha.nmims@gmail.com</a>
                     </p>
                 </div>
                 <div class="cinfo-footer">
@@ -549,7 +548,7 @@
         <div class=" row footer-bottom">
             <div class="col-twelve">
                 <div class="go-top">
-                    <a class="smoothscroll registerTop" title="Register here for Concalve 2021" href="/ayushya">Register</a>
+                    <a class="smoothscroll registerTop" title="Register here for Concalve 2021" href="{% url 'register:register-page' %}">Register</a>
                     <a class="smoothscroll" title="Back to Top" href="#top">
                         <i class="icon-arrow-up" aria-hidden="true"></i>
                     </a>
@@ -560,6 +559,7 @@
     <!-- /Footer -->
 
 
+    <!--Preloader-->
     <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
         <div class="pswp__bg"></div>
         <div class="pswp__scroll-wrap">
@@ -593,21 +593,21 @@
 
     <div id="preloader">
         <div id="loader">
-            <!-- <div class="line-scale-pulse-out">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div> -->
             <div class="scpreloader"><img src="{% static 'images/sclogo.png' %}" style="width:200px;"></div>
         </div>
     </div>
+    <!--Preloader-->
 
     <script data-cfasync="false" src="{% static 'js/cloudflare-static-email-decode.min.js' %}"></script>
     <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
     <script src="{% static 'js/9959-js-plugins.js' %}"></script>
     <script src="{% static 'js/320-js-main.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js" integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin=" anonymous"></script>
+    <script src="{% static 'js/earth.js' %}"></script>
 
     <script>
         function CardClick(thisCard) {
