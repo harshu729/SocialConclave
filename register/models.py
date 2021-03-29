@@ -1,6 +1,7 @@
 from django.db import models
 from phone_field import PhoneField
 from django.core import validators
+from django.utils import timezone
 
 # Create your models here.
 
@@ -38,5 +39,6 @@ class Delegate(models.Model):
     city = models.CharField(max_length=1000, blank=True)
     team = models.CharField(max_length=1000,blank=True)
     registeredBy = models.CharField(max_length=1000,blank=True)
+    timeRegistered = models.DateTimeField(default=timezone.now,null=True)
     def __str__(self):
         return self.name+' from '+self.schoolName

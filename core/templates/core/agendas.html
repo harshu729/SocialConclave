@@ -414,7 +414,6 @@
         $(".topic").click(function(e) {
             e.preventDefault();
             g = '#' + $(this).data('rel');
-            console.log(g);
             $('.agendasDscps .agendaDscp').fadeOut('fast');
             $('#' + $(this).data('rel')).fadeIn('slow');
         });
