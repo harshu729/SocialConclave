@@ -7,13 +7,16 @@
   <meta charset="utf-8">
   <title>Blogs | Social Conclave</title>
   <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="author" content="">r
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
     crossorigin="anonymous" />
 
+    <link rel="preload" href="{% static 'images/sclogo.png' %}" as="image">
+    <link rel="preload" href="{% static 'images/earthRing.png' %}" as="image">
+    
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
@@ -24,9 +27,9 @@
   <script src="{% static 'js/modernizr.js' %}"></script>
   <script src="{% static 'js/pace.min.js' %}"></script>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
-  <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
     <style>
             .services-list .service-text {
                 height: unset !important;
@@ -116,9 +119,6 @@
           ONE PROBLEM AT A TIME. <br>
         </h1>
         <div class="home-content__buttons">
-          <a href="{% url 'register:register-page' %}" class="btn btn--stroke">
-            Register
-          </a>
           <a href="{% url 'core:overTheYears' %}" class="btn btn--stroke">
             More About Us
           </a>
@@ -239,7 +239,6 @@
         <div class=" row footer-bottom">
             <div class="col-twelve">
                 <div class="go-top">
-                    <a class="smoothscroll registerTop" title="Register here for Concalve 2021" href="{% url 'register:register-page' %}">Register</a>
                     <a class="smoothscroll" title="Back to Top" href="#top">
                         <i class="icon-arrow-up" aria-hidden="true"></i>
                     </a>

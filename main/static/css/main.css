@@ -2728,7 +2728,25 @@ html.no-csstransitions .home-content__main {
 
 .clients__slide:hover,
 .clients__slide:focus {
-    opacity: 1;
+    opacity: 1 !important;
+}
+
+.sponsor {
+    width: 194px;
+    height: 194px;
+    opacity: 0.85;
+}
+
+.sponsor img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sponsor-name,
+.sponsor-type {
+    width: 100%;
 }
 
 .testi {
